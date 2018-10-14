@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.login{
+    background-color: #171717;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo{
+    margin-left: 40px;
+    margin-top: 86px;
+}
+
+.input{
+    margin-left: 40px;
+    background-color: transparent;
+    border: 1px solid #9EC2EF;
+    width: 270px;
+    height: 25px;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.top{
+    margin-top: 16px;
+}
+
+.botoes{
+    margin-left: 40px;
+    margin-top: 16px;
+}
+
+.botao{
+    color: white;
+    background-color: #377ACF;
+    width: 125px;
+    height: 31px;
+    border-radius: 4px;
+    border-color: transparent;
+    margin-right: 20px;
+}
+
+::placeholder{
+    color: #9EC2EF;
+    padding: 9px;
+    margin-left: 9px;
+}
