@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* #img{
+    margin: 0;
+    padding: 0;
+} */
+
+.menu{
+    width: 100vw;
+    height: 63px;
+    background-color: #171717;
+    bottom: 0;
+    position: absolute;
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu__icon{
+    margin-left: 31px;
+    margin-right: 31px;
+    margin-top: 17px;
+}
+
+.menu__icon--centro{
+    position: absolute;
+    /* left: 153px; */
+    /* text-align: center; */
+    margin-left: 166.5px;
+}
+
+.menu__icon--canto{
+    position: absolute;
+    right: 0;
+}
+
+.menu__icon--esquerda{
+    position: absolute;
+}
