@@ -1,0 +1,76 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(23, 23, 23);
+}
+.container>*{
+    margin: auto;
+}
+.logo{
+    width: 66.77px;
+    height: 87.89px;
+    display: block;
+    padding-top: 36px;
+    margin: 0 auto 73.11px auto;
+    /* background-color: #377ACF; */
+}
+.form{
+    display: block;
+    margin: auto;
+    width: 289px;
+}
+.input{
+    width: 270px;
+    height: 25px;
+    margin: 0 0 37px 0;
+    color: #9EC2EF;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: 17px;
+    border: 1px solid #9EC2EF;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+::placeholder{
+    color: #9EC2EF;
+}
+.form_btn{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 20%;
+}
+.btn__1{
+    border: 0;
+    width: 125px;
+    height: 31.21px;
+    display: block;
+    color: white;
+    border-radius: 4px;
+    background-color: #377acf;
+}
+.btn__2{
+    border: 0;
+    width: 125px;
+    height: 25px;
+    color: white;
+    border-radius: 12px;
+    background: linear-gradient(#9EC2EF,#377ACF);
+}
+.dots{
+    width: 125px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    }
+.dot{
+    margin-left: 25%;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    margin-bottom: 16.22px;
+}
+.dot__1{
+    background: linear-gradient(#9EC2EF,#377ACF)
+}
+.dot__2{
+    box-sizing: border-box;
+    border: 1px solid #9EC2EF;
+}

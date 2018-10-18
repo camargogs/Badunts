@@ -7,13 +7,15 @@ import { LoginComponent } from './login/login.component';
 import { LoadingComponent } from './loading/loading.component';
 import { MenuComponent } from './menu/menu.component';
 import { routing } from './app.routing';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LoadingComponent,
-    MenuComponent
+    MenuComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
