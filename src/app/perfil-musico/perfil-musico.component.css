@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav__tabs {
+  background-color: #F6F6F6;
+  height: 54px;
+  font-size: 12px;
+}
+
+.nav__tabs__musico {
+  background-color: #171717;
+  height: 34px;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 39px auto auto auto auto;
+}
+
+.nav__tabs__musico>div {
+  background-color: #171717;
+  height: 44px;
+  border-radius: 0px;
+  color: #efefef80;
+  text-align: center;
+}
+
+.nav__tabs__musico>div:first-child {
+  border-radius: 0 0 9px 0;
+}
+
+.nav__tabs__musico>.nav__tabs__musico--active {
+  border-radius: 9px;
+  color: #373737;
+  background-color: #F6F6F6;
+}
+
+.nav__tabs__musico>.nav__tabs__musico--active+div {
+  border-radius: 0 0 0 9px;
+}
+
+
+
+.container {
+  height: calc(100vh - 117px);
+  overflow: hidden;
+  background-color: #F6F6F6;
+}
+
+
+
+footer {
+  position: relative;
+  background-color: #171717;
+  height: 63px;
+}
+
+footer>div {
+  position: absolute;
+  top: 15px;
+  display: grid;
+  grid-template-columns: 60px auto 60px;
+  width: 100vw;
+  height: 30px;
+}
+
+footer>div>img {
+  width: 30px;
+  height: 30px;
+}
+
+footer>div>img:first-child {
+  margin-left: 30px;
+}
+
+footer>div>img:nth-child(2) {
+  width: 25.5px;
+  height: 34px;
+  margin: auto;
+}
