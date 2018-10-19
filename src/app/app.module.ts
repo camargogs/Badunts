@@ -2,12 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-// import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { LoadingComponent } from './loading/loading.component';
 import { MenuComponent } from './menu/menu.component';
 import { routing } from './app.routing';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { Cadastro2Component } from './cadastro2/cadastro2.component';
+import { Cadastro3ContratanteComponent } from './cadastro3-contratante/cadastro3-contratante.component';
+import { Cadastro4ContratanteComponent } from './cadastro4-contratante/cadastro4-contratante.component';
+import { Cadastro3MusicoComponent } from './cadastro3-musico/cadastro3-musico.component';
+import { Cadastro4MusicoComponent } from './cadastro4-musico/cadastro4-musico.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,12 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     LoginComponent,
     LoadingComponent,
     MenuComponent,
-    CadastroComponent
+    CadastroComponent,
+    Cadastro2Component,
+    Cadastro3ContratanteComponent,
+    Cadastro4ContratanteComponent,
+    Cadastro3MusicoComponent,
+    Cadastro4MusicoComponent
   ],
   imports: [
     BrowserModule,
