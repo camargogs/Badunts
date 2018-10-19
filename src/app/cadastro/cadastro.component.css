@@ -57,7 +57,7 @@
 
 .form__btn {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   margin-bottom: 20%;
 }
 
@@ -101,6 +101,9 @@
   border-radius: 12px;
   background: linear-gradient(#9EC2EF, #377ACF);
   opacity: 0.5;
+}
+.form__btn>.btn__typeUser+.btn__typeUser{
+  margin-left: calc(100% - 125px);
 }
 
 .btn__typeUser--active {
