@@ -79,3 +79,225 @@ footer>div>img:nth-child(2) {
   height: 34px;
   margin: auto;
 }
+.capaPerfil{
+  width: 340px;
+  height: 116px;
+  background-color:black;
+  margin:auto;
+  margin-top: 10px;
+}
+.biosPerfil{
+  width: 300px;
+  height: 70px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 9px;
+  color: #373737;
+  font-weight: normal;
+ 
+}
+
+.capaPerfil__foto{
+  width: 78px;
+  height: 78px;
+  background-color: #F6F6F6;
+  margin-top: 20px;
+  margin-left: 26px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.capaPerfil__dados{
+  width: 205px;
+  height: 82px;
+  display: inline-block;
+  float: right;
+  margin-top: 16px;
+  margin-right: 11px;
+
+}
+
+.capaPerfil__linha{
+    display: block;
+    width: 100%;
+    height: 43px;
+   
+}
+.capaPerfil__linha__nomeMusico{
+  width: 150px;
+  height: 43px;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 18px;
+  color: #EFEFEF;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+  line-height: 1.2;
+
+}
+
+.capaPerfil__linha__avaliacaoMusico{
+  width: 40px;
+  height: 24px;
+ display: inline-block;
+  font-size: 18px;
+  float:right;
+  color: #EFEFEF;
+  font-weight: bold;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+
+.capaPerfil__tagEstiloMusical{
+  width: 48px;
+  height: 14px;
+  background-color:#377ACF;
+  margin-top: 7px;
+  vertical-align: middle;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 8px;
+  color: #FFFFFF;
+  
+  
+}
+
+.capaPerfil__enderecoMusico{
+
+  width: 80px;
+  height: 14px;
+  margin-top: 5px;
+  text-align: left;
+  font-size: 9px;
+  color: #FFFFFF;
+  vertical-align: middle;
+}
+.tabsContainer{
+  width:340px;
+  height: 43px;
+  margin: auto;
+  margin-top: 5px;
+  border-top: 1px solid  #C9C9C9;
+  
+
+}
+.tabsContainer__perfil{
+  width: 324px;
+  height: 43px;
+  margin: auto;
+
+}
+
+.tabsContainer__perfil__portfolio{
+  width: 60px;
+  height: 20px;
+  background-color: #377ACF;
+  font-size: 12px;
+  color: #EFEFEF;
+  display:inline-block;
+  border-radius: 14px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 11px 4px 0px 0px;
+  opacity: 0.7;
+ 
+
+}
+.tabsContainer__perfil__portfolio--active{
+  width: 60px;
+  height: 20px;
+  font-size: 12px;
+  color: #EFEFEF;
+  display:inline-block;
+  border-radius: 14px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 11px 4px 0px 0px;
+ background-color: #377ACF;
+}
+.posts{
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+
+}
+.posts__postPortfolio{
+  width: 100%;
+  height: 232px;
+  border-top: 1px solid #C9C9C9;
+  border-bottom: 1px solid #C9C9C9;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  
+}
+.posts__postPortfolio__opcaoConteudo{
+  width: 300px;
+  height: 8px;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 5px;
+  
+}
+.posts__postPortfolio__opcaoFixar{
+  width: 40px;
+  height: 8px;
+  float: left;
+  color: #C9C9C9;
+  font-size: 6px;
+  text-align: center;
+  
+}
+.posts__postPortfolio__dots{
+  width: 20px;
+  height: 8px;
+ 
+  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.posts__postPortfolio__dots__dot{
+  width: 4px;
+  height: 4px;
+  background-color: #C9C9C9;
+  border-radius: 50%;
+  flex: 0 1 auto; 
+  align-self: center;
+}
+  
+
+.posts__postPortfolio__arquivoAnexado{
+  width: 300px;
+  height: 153px;
+  background-color: #C9C9C9;
+  margin-left: 30px;
+  margin-top: 11px;
+}
+.posts__postPortfolio__conteudoAnexado{
+  width: 300px;
+  height: 50px;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+.posts__postPortfolio__conteudoAnexado__titulo{
+  width: 72px;
+  height: 16px;
+  color: #373737;
+  font-size: 12px;
+  text-align: left;
+  vertical-align: middle;
+
+}
+.posts__postPortfolio__conteudoAnexado__conteudo{
+  width: 100%;
+  height: 29px;
+  margin-top: 5px;
+  color: #373737;
+  text-align: left;
+  font-size: 9px;
+}
+
+
+
