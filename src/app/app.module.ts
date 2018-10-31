@@ -9,13 +9,15 @@ import { MenuComponent } from './menu/menu.component';
 import { routing } from './app.routing';
 import { PerfilMusicoComponent } from './perfil-musico/perfil-musico.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LoadingComponent,
     MenuComponent,
-    PerfilMusicoComponent
+    PerfilMusicoComponent,
+   
   ],
   imports: [
     BrowserModule,
