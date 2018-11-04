@@ -10,7 +10,7 @@ import { PerfilMusicoComponent } from './perfil-musico/perfil-musico.component';
 import { PerfilMusicoShowsComponent } from './perfil-musico-shows/perfil-musico-shows.component';
 import { PerfilMusicoAgendaComponent } from './perfil-musico-agenda/perfil-musico-agenda.component';
 import { PerfilMusicoAvaliacoesComponent } from './perfil-musico-avaliacoes/perfil-musico-avaliacoes.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { PerfilMusicoAvaliacoesComponent } from './perfil-musico-avaliacoes/perf
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
