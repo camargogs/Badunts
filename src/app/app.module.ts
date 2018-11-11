@@ -30,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     Cadastro3ContratanteComponent,
     Cadastro4ContratanteComponent,
     Cadastro3MusicoComponent,
-    Cadastro4MusicoComponent
+    Cadastro4MusicoComponent,
     PerfilMusicoComponent,
     PerfilMusicoShowsComponent,
     PerfilMusicoAgendaComponent,
