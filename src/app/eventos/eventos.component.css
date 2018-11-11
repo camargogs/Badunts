@@ -5,13 +5,24 @@
 
 .container {
   background-color: #171717;
+  color: #EBEBEB;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 63px);
+  overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
 }
 
-.upperbar,
-.btn__add {
+.container>* {
+  display: block;
+  width: 289px;
+  margin: auto;
+}
+.container>.musicos{
+    width: 100vw;
+}
+.container>.upperbar,
+.container>.btn__add {
   width: 100vw;
   height: 54px;
   background-color: #171717;
@@ -19,8 +30,9 @@
   box-shadow: 0px 4px rgba(0, 0, 0, 0.16);
   box-sizing: border-box;
 }
+
 .btn__add>div {
-    margin: 15px auto 0 auto;
+  margin: 15px auto 0 auto;
   position: relative;
   width: 25px;
   height: 25px;
@@ -35,6 +47,7 @@
   width: 25px;
   height: 5px;
 }
+
 .btn__add>div>div+div {
   top: 0px;
   left: 10px;
@@ -148,4 +161,149 @@
   padding-top: 50%;
   text-align: center;
   color: #377ACF;
+}
+
+
+
+/* navegador rodapé */
+footer {
+  position: relative;
+  background-color: #171717;
+  height: 63px;
+}
+
+footer>div {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 110px auto 110px;
+  width: 100vw;
+  height: 60px;
+}
+
+footer>div>img {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+footer>div>img:nth-child(2) {
+  padding: 0;
+  width: 25.5px;
+  height: 34px;
+}
+
+
+/* formulario do cadastro */
+.form {
+  display: block;
+  margin: auto;
+  width: 289px;
+  padding-top: 37px;
+}
+
+.form>div {
+  display: grid;
+  grid-template-columns: auto 22px auto;
+}
+
+.form__textInput {
+  width: 100%;
+  height: 25px;
+  margin: 0 0 37px 0;
+  padding-left: 17px;
+  box-sizing: border-box;
+  color: #9EC2EF;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #377ACF;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+::placeholder {
+  color: #9EC2EF;
+}
+
+.form__btn {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 20%;
+}
+
+.form__radio {
+  margin-top: 15px;
+}
+
+.form__radio>div {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  box-sizing: border-box;
+  border: 2px solid #377acf;
+  border-radius: 100px;
+}
+
+.form__radio>div+label {
+  color: #377ACF;
+  padding-left: 8px;
+}
+
+.form__radio--checked>div {
+  background: radial-gradient(#377ACF 30%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 50%);
+}
+
+
+.btn__addTag {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  box-sizing: border-box;
+  background-color: #377ACF;
+  border-radius: 100px;
+}
+
+.btn__addTag>div {
+  position: absolute;
+  background-color: #171717;
+  top: 10px;
+  left: 6px;
+  width: 10px;
+  height: 2px;
+}
+
+.btn__addTag>div+div {
+  top: 6px;
+  left: 10px;
+  width: 2px;
+  height: 10px;
+}
+
+
+/* seletor de pagina */
+.footer__btn {
+  position: absolute;
+  bottom: 6vh;
+  padding-left: calc(50vw - 144px);
+}
+
+.dots {
+  margin: auto;
+  width: 45px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.dot {
+  margin-left: 25%;
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  border: 1px solid #9EC2EF;
+}
+
+.dot--active {
+  background: linear-gradient(#9EC2EF, #377ACF);
+  border: 0;
 }
