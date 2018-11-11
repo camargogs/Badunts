@@ -17,6 +17,7 @@ import { PerfilMusicoShowsComponent } from './perfil-musico-shows/perfil-musico-
 import { PerfilMusicoAgendaComponent } from './perfil-musico-agenda/perfil-musico-agenda.component';
 import { PerfilMusicoAvaliacoesComponent } from './perfil-musico-avaliacoes/perfil-musico-avaliacoes.component';
 import { FormsModule } from '@angular/forms';
+import { PerfilContratanteComponent } from './perfil-contratante/perfil-contratante.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     PerfilMusicoShowsComponent,
     PerfilMusicoAgendaComponent,
     PerfilMusicoAvaliacoesComponent,
+    PerfilContratanteComponent,
   ],
   imports: [
     BrowserModule,
