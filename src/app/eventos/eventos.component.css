@@ -170,6 +170,7 @@ footer {
   position: relative;
   background-color: #171717;
   height: 63px;
+  box-shadow: 0 -3px 4px #00000020;
 }
 
 footer>div {
@@ -278,6 +279,82 @@ footer>div>img:nth-child(2) {
   height: 10px;
 }
 
+
+/* Perfil do evento */
+
+.container>.capaPerfil{
+    position: relative;
+    width: 340px;
+    display: grid;
+    grid-template-columns: 130px auto;
+    height: 116px;
+    background-color: black;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .capaPerfil>.btn__addTag{
+    position: absolute;
+    bottom: 18px;
+    right: 10px;
+  }
+  
+  .capaPerfil__foto {
+    position: relative;
+    width: 78px;
+    height: 78px;
+    background-color: #F6F6F6;
+    margin-top: 20px;
+    margin-left: 26px;
+    border-radius: 50%;
+  }
+  .capaPerfil__foto>.btn__addTag{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  
+.capaPerfil__dados {
+    display: grid;
+    grid-template-rows: 43px 20px auto;
+    margin-top: 16px;
+  }
+  .capaPerfil__dados__nome {
+    width: 150px;
+    height: 43px;
+    font-size: 18px;
+    color: #EFEFEF;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+  .capaPerfil__dados__endereco {
+    margin-top: 5px;
+    font-size: 9px;
+    color: #FFFFFF;
+  }
+
+
+  .capaPerfil__linha__avaliacaoMusico {
+    margin-top: 16px;
+    display: -webkit-box;
+    font-size: 18px;
+    color: #EFEFEF;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+
+  .container>.btn__default {
+      margin-top: 5vh;
+    border: 0;
+    width: 125px;
+    height: 31.21px;
+    display: block;
+    color: white;
+    border-radius: 4px;
+    background-color: #377acf;
+  }
 
 /* seletor de pagina */
 .footer__btn {
