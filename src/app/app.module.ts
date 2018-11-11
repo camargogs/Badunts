@@ -17,6 +17,10 @@ import { PerfilMusicoShowsComponent } from './perfil-musico-shows/perfil-musico-
 import { PerfilMusicoAgendaComponent } from './perfil-musico-agenda/perfil-musico-agenda.component';
 import { PerfilMusicoAvaliacoesComponent } from './perfil-musico-avaliacoes/perfil-musico-avaliacoes.component';
 import { FormsModule } from '@angular/forms';
+import { EventosComponent } from './eventos/eventos.component';
+import { EventosCadastroComponent } from './eventos-cadastro/eventos-cadastro.component';
+import { EventosCadastro2Component } from './eventos-cadastro2/eventos-cadastro2.component';
+import { EventosEventoComponent } from './eventos-evento/eventos-evento.component';
 
 
 @NgModule({
@@ -30,11 +34,15 @@ import { FormsModule } from '@angular/forms';
     Cadastro3ContratanteComponent,
     Cadastro4ContratanteComponent,
     Cadastro3MusicoComponent,
-    Cadastro4MusicoComponent
+    Cadastro4MusicoComponent,
     PerfilMusicoComponent,
     PerfilMusicoShowsComponent,
     PerfilMusicoAgendaComponent,
     PerfilMusicoAvaliacoesComponent,
+    EventosComponent,
+    EventosCadastroComponent,
+    EventosCadastro2Component,
+    EventosEventoComponent,
   ],
   imports: [
     BrowserModule,

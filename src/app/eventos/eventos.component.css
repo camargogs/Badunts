@@ -1,0 +1,151 @@
+* {
+  padding: 0px;
+  margin: 0;
+}
+
+.container {
+  background-color: #171717;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.upperbar,
+.btn__add {
+  width: 100vw;
+  height: 54px;
+  background-color: #171717;
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.16);
+  box-sizing: border-box;
+}
+.btn__add>div {
+    margin: 15px auto 0 auto;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  /* display: inline-block; */
+  /* box-sizing: border-box; */
+}
+
+.btn__add>div>div {
+  position: absolute;
+  background-color: #377ACF;
+  top: 10px;
+  width: 25px;
+  height: 5px;
+}
+.btn__add>div>div+div {
+  top: 0px;
+  left: 10px;
+  width: 5px;
+  height: 25px;
+}
+
+.upperbar>p {
+  padding-top: 10px;
+  width: 80px;
+  margin: auto;
+  font-size: 26px;
+  color: #EBEBEB;
+}
+
+/* detetalhes da lista de musicos*/
+.musico {
+  width: 100vw;
+  height: 80px;
+  border-bottom: 1px solid #707070;
+  display: grid;
+  grid-template-columns: 92px auto auto;
+}
+
+.musico>div:first-child {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-left: 16px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.foto {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  margin: -1px 0 0 -1px;
+  background-color: #377ACF;
+  /* essa cor é só representativa do display da foto */
+}
+
+.infos {
+  display: grid;
+  grid-template-rows: 14px auto auto auto;
+}
+
+.nome {
+  font-size: 12pt;
+  color: #EBEBEB;
+}
+
+.tags {
+  display: flex;
+}
+
+.tag {
+  border-radius: 8px;
+  background-color: #377ACF;
+  width: auto;
+  height: 14px;
+  padding: 0px 8px 0px 8px;
+  box-sizing: border-box;
+}
+
+.tag p {
+  font-size: 8pt;
+  color: #EBEBEB;
+  font-family: sans-serif;
+}
+
+.local {
+  font-size: 7pt;
+  color: #EBEBEB;
+}
+
+.preco {
+  color: #EBEBEB;
+  display: grid;
+  grid-template-rows: 14px 30px auto;
+}
+
+.data {
+  font-weight: 400;
+  font-size: 20pt;
+
+  padding-right: 10px;
+}
+
+.data p {
+  float: right;
+  padding-right: 16px;
+}
+
+.hora {
+  font-size: 16pt;
+  padding-right: 10px;
+}
+
+.hora p {
+  float: right;
+  padding-right: 16px;
+}
+
+
+.messege {
+  height: 100vw;
+  width: 100vw;
+}
+
+.messege p {
+  padding-top: 50%;
+  text-align: center;
+  color: #377ACF;
+}
