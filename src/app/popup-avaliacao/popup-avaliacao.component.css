@@ -8,7 +8,8 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
 }
 
 .head{
@@ -22,15 +23,15 @@
     align-items: flex-end;
 }
 .head__perfil{
-    position: absolute;
+    /* position: absolute; */
     /* margin-right: 50px; */
     /* background-color: purple; */
     /* padding-top: 70px; */
-    background-color: purple;
+    background-color: rgba(128, 0, 128, 0);
 }
 
 .input{
-    margin-left: 40px;
+    padding-left: 8px;
     background-color: transparent;
     border: 1px solid #9EC2EF;
     width: 270px;
@@ -42,17 +43,44 @@
 }
 
 .avaliar{
+    height: 400px;
     position: absolute;
-    margin-top: 243px;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.avaliar__image {
+    margin-left: 45px;
 }
 
+.avaliar__image img{
+    padding-left: 55px;
+     
+}
+.avaliar__image p{
+    padding-left: 30px;
+}
 .avaliar p{
-    margin-left: 55px;
+    display: block;
     color: white;
     font-size: 12pt;
 }
+.stars{
+    margin-top: 40px;   
+}
 
-.icon-star:before {
-    content: "\e900";
-    color: #377acf;
-  }
+.icon-star::before{
+    padding-left: 28px; 
+    font-size: 22px;
+    color: #031524!important;
+}
+
+.btn-envi{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(1, 127, 211);
+    margin-top: 40px;
+    margin-left: 90px; 
+}
