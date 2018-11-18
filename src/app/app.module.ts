@@ -21,6 +21,7 @@ import { EventosComponent } from './eventos/eventos.component';
 import { EventosCadastroComponent } from './eventos-cadastro/eventos-cadastro.component';
 import { EventosCadastro2Component } from './eventos-cadastro2/eventos-cadastro2.component';
 import { EventosEventoComponent } from './eventos-evento/eventos-evento.component';
+import { EventosEvento2Component } from './eventos-evento2/eventos-evento2.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { EventosEventoComponent } from './eventos-evento/eventos-evento.componen
     EventosCadastroComponent,
     EventosCadastro2Component,
     EventosEventoComponent,
+    EventosEvento2Component,
   ],
   imports: [
     BrowserModule,

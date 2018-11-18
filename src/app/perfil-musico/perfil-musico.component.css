@@ -125,7 +125,10 @@
   font-weight: bold;
   vertical-align: middle;
 }
-
+.capaPerfil__linha__avaliacaoMusico>img{
+  margin-left: 2px; 
+  width: 10px;
+}
 
 
 .biosPerfil {
