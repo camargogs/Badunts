@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { and } from '@angular/router/src/utils/collection';
 
 @Component({
-  selector: 'app-perfil-musico',
-  templateUrl: './perfil-musico.component.html',
-  styleUrls: ['./perfil-musico.component.css']
+  selector: 'app-perfil-contratante',
+  templateUrl: './perfil-contratante.component.html',
+  styleUrls: ['./perfil-contratante.component.css']
 })
-export class PerfilMusicoComponent implements OnInit {
+export class PerfilContratanteComponent implements OnInit {
+
   tagvideo:boolean;
   tagaudio:boolean;
   tagtexto:boolean;
@@ -17,11 +19,11 @@ export class PerfilMusicoComponent implements OnInit {
   texto:string;
   todo:string;
 
-
   constructor() { }
 
   ngOnInit() {
   }
+ 
   alterarTagVideo(){
     if((this.tagvideo=true)&& (this.video = 'block')){
       this.tagaudio=false;
@@ -94,5 +96,5 @@ export class PerfilMusicoComponent implements OnInit {
       }
   
 }
-
 }
+
