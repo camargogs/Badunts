@@ -17,10 +17,32 @@ export class PerfilMusicoComponent implements OnInit {
   texto:string;
   todo:string;
 
+  agendaId: string;
+  avaliacao: number;
+  carteiraId: string;
+  cep: number;
+  cidade: string;
+  conta: string;
+  cpf: string;
+  email: string;
+  endereco: string;
+  genero: string;
+  musicoId: string;
+  nome: string;
+  rg: string;
+  senha: string;
+  tipo: string;
+  usuario: string;
 
   constructor() { }
 
   ngOnInit() {
+    var user = JSON.parse(localStorage.getItem("atual"));
+    console.log(user);
+    this.nome = user.nome;
+    this.cidade = user.cidade;
+    this.genero = user.genero;
+    this.avaliacao = user.avaliacao; 
   }
   alterarTagVideo(){
     if((this.tagvideo=true)&& (this.video = 'block')){

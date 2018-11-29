@@ -8,5 +8,13 @@ export class Contratante{
         // public evento: Evento[],
         public avaliacao: number,
         public carteiraID: string,
+        public rg:string,
+        public cpf:string,
+        public cidade:string,
+        public endereco: string,
+        public cep: number,
+        public estabelecimento: string,
+        public publico: number,
+        public cartao: number
     ){}
 } 

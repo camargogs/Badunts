@@ -22,6 +22,10 @@ export class PerfilContratanteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    var user = JSON.parse(localStorage.getItem("contratantes"));
+    var card = JSON.parse(localStorage.getItem("cartaos"));
+    console.log(user);
+    console.log(card);
   }
  
   alterarTagVideo(){

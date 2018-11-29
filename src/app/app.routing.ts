@@ -1,3 +1,4 @@
+import { PerfilContratanteComponent } from './perfil-contratante/perfil-contratante.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { Routes, RouterModule } from "@angular/router";
@@ -22,7 +23,8 @@ const APP_ROUTES: Routes = [
 {path:"cadastrar4contra", component: Cadastro4ContratanteComponent},
 {path:"cadastrar4musi", component: Cadastro4MusicoComponent},
 {path:"menu", component:MenuComponent},
-{path:"perfil",component:PerfilMusicoComponent},
+{path:"perfilMusico",component:PerfilMusicoComponent},
+{path:"perfilContratante",component:PerfilContratanteComponent},
 {path:"shows", component:PerfilMusicoShowsComponent},
 {path:"agenda", component:PerfilMusicoAgendaComponent},
 {path:"avaliacoes", component:PerfilMusicoAvaliacoesComponent}
