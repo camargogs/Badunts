@@ -11,5 +11,13 @@ export class Cadastro3ContratanteComponent implements OnInit {
 
   ngOnInit() {
   }
+  estabelecimento: String;
+  publico: number;
+  contraPart3(estabelecimento,publico){
+    var user = JSON.parse(localStorage.getItem("contratante"));
+    user.estabelecimento = estabelecimento;
+    user.publico = publico;
+    localStorage.setItem("contratante", JSON.stringify(user));
+  }
 
 }

@@ -3,20 +3,20 @@
     <div class="nav__tabs__musico--preActive">
       <div></div> <img src="../../assets/images/arrow-point-to-right.svg">
     </div>
-    <div class="nav__tabs__musico--active">
-      <div></div> <img src="../../assets/images/perfil-ativo.svg">
+    <div class="nav__tabs__musico--active" routerLink ="/perfil">
+      <div></div> <img src="../../assets/images/profiles-ativo.png">
       <p>Perfil</p>
     </div>
-    <div>
-      <div></div> <img src="../../assets/images/tickets-inativo.svg">
+    <div routerLink ="/shows">
+      <div></div> <img src="../../assets/images/tickets-inativo.png">
       <p>Shows</p>
     </div>
-    <div>
-      <div></div> <img src="../../assets/images/calendar-inativo.svg">
+    <div routerLink ="/agenda">
+      <div></div> <img src="../../assets/images/calendar-inativo.png">
       <p>Agenda</p>
     </div>
-    <div>
-      <div></div> <img src="../../assets/images/star-inativo.svg">
+    <div routerLink ="/avaliacoes">
+      <div></div> <img src="../../assets/images/star-inativo.png">
       <p>Avaliações</p>
     </div>
   </div>
@@ -30,20 +30,19 @@
 
     <div class="capaPerfil__dados">
       <div class="capaPerfil__dados__nome">
-        <p>Selvagens a
-          procura de lei</p>
+        <p >{{nome}}</p>
       </div>
       <div class="capaPerfil__dados__tag">
-        <p>Sertanejo</p>
+        <p>{{genero}}</p>
       </div>
       <div class="capaPerfil__dados__endereco">
-        <p>Sobral-CE</p>
+        <p>{{cidade}}</p>
       </div>
     </div>
 
     <div class="capaPerfil__linha__avaliacaoMusico">
-      <p>4.8</p>
-      <img src="../../assets/images/star-orange.svg">
+      <p>{{avaliacao}}</p>
+      <img src="../../assets/images/star-orange.png">
     </div>
 
   </div>
@@ -60,22 +59,23 @@
   <div class="tagsContent">
     <div class="tagsContent__typeMedia">
       <div></div>
-      <div>Todos</div>
+      <div [class.tagsContent__typeMedia--active] = "tagtodo" (click) = alterarTagTodo()>Todos</div>
       <div></div>
-      <div class="tagsContent__typeMedia--active">Videos</div>
+      <div [class.tagsContent__typeMedia--active] = "tagvideo" (click) = alterarTagVideo() >Videos</div>
       <div></div>
-      <div>Áudios</div>
+      <div  [class.tagsContent__typeMedia--active] = "tagaudio" (click) = alterarTagAudio()>Áudios</div>
       <div></div>
-      <div>Textos</div>
+      <div [class.tagsContent__typeMedia--active] = "tagtexto" (click) = alterarTagTexto()>Textos</div>
       <div></div>
-      <div>Fotos</div>
+      <div [class.tagsContent__typeMedia--active] = "tagfoto" (click) = alterarTagFoto()>Fotos</div>
       <div></div>
     </div>
   </div>
 
 
   <div class="posts">
-    <div class="post">
+    <!-- post video -->
+    <div [style.display] = "video" (click) = alterarTagVideo() class="post video">
       <div class="post__opcaoConteudo">
         <div class="post__opcaoFixar">Video Fixado</div>
         <div class="post__dots">
@@ -95,6 +95,90 @@
           labore et dolore magna aliqua.</div>
       </div>
     </div>
+<!-- post audio -->
+<div  [style.display] = "audio" (click) = alterarTagAudio() class="post audio">
+    <div class="post__opcaoConteudo">
+      <div class="post__opcaoFixar">Audio Fixado</div>
+      <div class="post__dots">
+        <div class="post__dots__dot"></div>
+        <div class="post__dots__dot"></div>
+        <div class="post__dots__dot"></div>
+    </div>
+    </div>
+      
+
+      <div class="post__conteudoAnexado--audio">
+          <div class="post__conteudoAnexado__container">
+              <div class="post__conteudoAnexado__capa"></div>
+              <div class="post__conteudoAnexado__infoAudio">
+                <div class="post__conteudoAnexado__infoAudio__cont">
+                    <img src="../../assets/images/play.png">
+                  <span class="post__conteudoAnexado__infoAudio__text">
+                      Lorem Ipsum
+                  </span>
+                </div>
+                
+                <div class="post__conteudoAnexado__infoAudio_subtitulo">Lorem Ipsum dolor sit - Lorem Ipsum</div>
+                <div class="tempo_inicio">0:30</div>
+                <div class="post__conteudoAnexado__infoAudio__audio">
+                  <div class="audio_marcacao"></div>
+                </div>
+                <div class="tempo_fim">3:18
+
+                </div>
+            </div>
+
+      </div>
+         
+    </div>
+    </div>
+
+
+<!-- post texto -->
+<div  [style.display] = "texto" (click) = alterarTagTexto() class="post texto">
+    <div class="post__opcaoConteudo">
+      <div class="post__opcaoFixar">Texto Fixado</div>
+      <div class="post__dots">
+        <div class="post__dots__dot"></div>
+        <div class="post__dots__dot"></div>
+        <div class="post__dots__dot"></div>
+      </div>
+    </div>
+
+    
+    <div class="post__conteudoAnexado--texto">
+      <div class="post__conteudoAnexado__titulo--texto">Lorem Ipsum</div>
+      <div class="post__conteudoAnexado__subtitulo--texto">Lorem Ipsum dont </div>
+      
+      <div class="post__conteudoAnexado__conteudo">
+        Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua.</div>
+    </div>
+  </div>
+
+<!-- post foto -->
+<div [style.display] = "foto" (click) = alterarTagFoto() class="post foto">
+    <div class="post__opcaoConteudo">
+      <div class="post__opcaoFixar">Foto Fixado</div>
+      <div class="post__dots">
+        <div class="post__dots__dot"></div>
+        <div class="post__dots__dot"></div>
+        <div class="post__dots__dot"></div>
+      </div>
+    </div>
+
+    <div class="post__arquivoAnexado">
+    </div>
+    <div class="post__conteudoAnexado">
+      <div class="post__conteudoAnexado__titulo">Lorem Ipsum</div>
+      <div class="post__conteudoAnexado__conteudo">
+        Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua.</div>
+    </div>
+  </div>
+
   </div>
 
 </div>

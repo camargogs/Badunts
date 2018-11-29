@@ -22,6 +22,8 @@ import { EventosCadastroComponent } from './eventos-cadastro/eventos-cadastro.co
 import { EventosCadastro2Component } from './eventos-cadastro2/eventos-cadastro2.component';
 import { EventosEventoComponent } from './eventos-evento/eventos-evento.component';
 import { EventosEvento2Component } from './eventos-evento2/eventos-evento2.component';
+import { PopupAvaliacaoComponent } from './popup-avaliacao/popup-avaliacao.component';
+import { PerfilContratanteComponent } from './perfil-contratante/perfil-contratante.component';
 
 
 @NgModule({
@@ -45,6 +47,8 @@ import { EventosEvento2Component } from './eventos-evento2/eventos-evento2.compo
     EventosCadastro2Component,
     EventosEventoComponent,
     EventosEvento2Component,
+    PopupAvaliacaoComponent,
+    PerfilContratanteComponent,
   ],
   imports: [
     BrowserModule,

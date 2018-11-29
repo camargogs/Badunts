@@ -6,23 +6,27 @@
   <label>Gêneros musicais</label>
   <div style="margin: 15px auto 37px auto;">
     <div class=btn__addTag>
-        <div></div>
-        <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
-
+  <div>
+    <form class="form">
+      <input class="form__textInput" name="generos" type="text" placeholder="Digite o genero" [(ngModel)] = "generos" >
+    </form>
+  </div>
   <Form class="form">
     <label>Tipo</label>
 
-    <div class="form__radio form__radio--checked">
+    <div class="form__radio" [class.form__radio--checked]="tipo1" (click)= "onClickBanda()">
       <div></div><label>Banda</label>
     </div>
 
-    <div class="form__radio">
+    <div class="form__radio"  [class.form__radio--checked]="tipo2" (click) = "onClickSolo()">
       <div></div><label>Solo</label>
     </div>
 
-    <div class="form__radio">
+    <div class="form__radio"  [class.form__radio--checked]="tipo3" (click) = "OnClickDj()">
       <div></div><label>Dj</label>
     </div>
 
@@ -34,6 +38,6 @@
       <div class="dot dot--active"></div>
       <div class="dot"></div>
     </div>
-    <button class="btn__default">Avançar</button>
+    <button class="btn__default" routerLink="/cadastrar4musi" (click) = "cardPart3(generos)">Avançar</button>
   </div>
 </div>

@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    background-color: #171717;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.head{
+    height: 25%;
+    width: 100%;
+    background-image: url('../../assets/images/capa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center ;
+    align-items: flex-end;
+}
+.head__perfil{
+    /* position: absolute; */
+    /* margin-right: 50px; */
+    /* background-color: purple; */
+    /* padding-top: 70px; */
+    background-color: rgba(128, 0, 128, 0);
+}
+
+.input{
+    padding-left: 8px;
+    background-color: transparent;
+    border: 1px solid #9EC2EF;
+    width: 270px;
+    height: 25px;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 16px;
+    margin-top: 40px;
+}
+
+.avaliar{
+    height: 400px;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.avaliar__image {
+    margin-left: 45px;
+}
+
+.avaliar__image img{
+    padding-left: 55px;
+     
+}
+.avaliar__image p{
+    padding-left: 30px;
+}
+.avaliar p{
+    display: block;
+    color: white;
+    font-size: 12pt;
+}
+.stars{
+    margin-top: 40px;   
+}
+
+.icon-star::before{
+    padding-left: 28px; 
+    font-size: 22px;
+    color: #031524!important;
+}
+
+.btn-envi{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(1, 127, 211);
+    margin-top: 40px;
+    margin-left: 90px; 
+}

@@ -10,6 +10,14 @@ export class Musico{
         public carteiraId: string,
         public avaliacao: number,
         public agendaId: string,
+        public rg:string,
+        public cpf:string,
+        public cidade:string,
+        public endereco: string,
+        public cep: number,
+        public genero:string[],
+        public tipo: string,
+        public conta: number
     ){    
     }
 }
