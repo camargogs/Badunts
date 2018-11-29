@@ -1,3 +1,8 @@
+import { EventosEventoComponent } from './eventos-evento/eventos-evento.component';
+import { EventosEvento2Component } from './eventos-evento2/eventos-evento2.component';
+import { EventosCadastroComponent } from './eventos-cadastro/eventos-cadastro.component';
+import { EventosCadastro2Component } from './eventos-cadastro2/eventos-cadastro2.component';
+import { EventosComponent } from './eventos/eventos.component';
 import { PerfilContratanteComponent } from './perfil-contratante/perfil-contratante.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
@@ -24,6 +29,14 @@ const APP_ROUTES: Routes = [
 {path:"cadastrar4musi", component: Cadastro4MusicoComponent},
 {path:"menu", component:MenuComponent},
 {path:"perfilMusico",component:PerfilMusicoComponent},
+{path:"shows", component:PerfilMusicoShowsComponent},
+{path:"agenda", component:PerfilMusicoAgendaComponent},
+{path:"avaliacoes", component:PerfilMusicoAvaliacoesComponent},
+{path:"eventos", component:EventosComponent},
+{path:"eventocad", component:EventosCadastroComponent},
+{path:"eventocad2", component:EventosCadastro2Component},
+{path:"eventoeve", component:EventosEventoComponent},
+{path:"eventoeve2", component:EventosEvento2Component},
 {path:"perfilContratante",component:PerfilContratanteComponent},
 {path:"shows", component:PerfilMusicoShowsComponent},
 {path:"agenda", component:PerfilMusicoAgendaComponent},

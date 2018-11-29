@@ -17,6 +17,11 @@ import { PerfilMusicoShowsComponent } from './perfil-musico-shows/perfil-musico-
 import { PerfilMusicoAgendaComponent } from './perfil-musico-agenda/perfil-musico-agenda.component';
 import { PerfilMusicoAvaliacoesComponent } from './perfil-musico-avaliacoes/perfil-musico-avaliacoes.component';
 import { FormsModule } from '@angular/forms';
+import { EventosComponent } from './eventos/eventos.component';
+import { EventosCadastroComponent } from './eventos-cadastro/eventos-cadastro.component';
+import { EventosCadastro2Component } from './eventos-cadastro2/eventos-cadastro2.component';
+import { EventosEventoComponent } from './eventos-evento/eventos-evento.component';
+import { EventosEvento2Component } from './eventos-evento2/eventos-evento2.component';
 import { PopupAvaliacaoComponent } from './popup-avaliacao/popup-avaliacao.component';
 import { PerfilContratanteComponent } from './perfil-contratante/perfil-contratante.component';
 
@@ -37,6 +42,11 @@ import { PerfilContratanteComponent } from './perfil-contratante/perfil-contrata
     PerfilMusicoShowsComponent,
     PerfilMusicoAgendaComponent,
     PerfilMusicoAvaliacoesComponent,
+    EventosComponent,
+    EventosCadastroComponent,
+    EventosCadastro2Component,
+    EventosEventoComponent,
+    EventosEvento2Component,
     PopupAvaliacaoComponent,
     PerfilContratanteComponent,
   ],
