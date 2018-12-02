@@ -61,6 +61,18 @@
   background-color: #F6F6F6;
 }
 
+.block{
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 117px);
+  background-color: #000000a2;
+}
+.block>h1{
+  padding-top: 50%; 
+  color: #EFEFEF;
+  text-align: center;
+}
+
 /* Perfil */
 
 .capaPerfil {
