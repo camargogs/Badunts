@@ -109,7 +109,9 @@
 .btn__typeUser--active {
   opacity: 1;
 }
-
+.btn__typeUser--active:focus{
+  outline: none;
+}
 .btn__addTag{
     position: relative;
     display: inline-block;
@@ -155,4 +157,8 @@
 .dot--active {
   background: linear-gradient(#9EC2EF, #377ACF);
   border: 0;
+}
+
+.btn_none{
+  display: none;
 }

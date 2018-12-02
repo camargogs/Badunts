@@ -137,7 +137,10 @@
   font-weight: bold;
   vertical-align: middle;
 }
-
+.capaPerfil__linha__avaliacaoMusico>img{
+  margin-left: 2px; 
+  width: 10px;
+}
 
 
 .biosPerfil {
@@ -212,7 +215,7 @@
   height: 8px;
   float: right;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-betwe;
 }
 
 .post__dots__dot {
@@ -244,6 +247,153 @@
   margin-top: 5px;
   font-size: 9px;
 }
+
+ /* tag post video */
+ .video{
+  display: none;
+
+
+  
+  }
+  
+  /* tag post audio */
+  .audio{
+  height: 86px;
+ display: none;
+ 
+
+ 
+  
+   
+    
+  }
+  
+  .post__conteudoAnexado__container{
+    width: calc(100% - 10px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+ 
+   
+  }
+  
+  .post__conteudoAnexado__capa{
+    flex: 1;
+    margin: 5px;
+    height: 60px;
+    width: 60px;
+    background-color: #377ACF;
+    margin-left: 30px;
+   
+  }
+  .post__conteudoAnexado__infoAudio{
+    flex:4;
+    margin-left: 15px;
+    margin-top: 5px;
+    height: 60px;
+
+
+  
+
+  }
+  .post__conteudoAnexado__infoAudio__cont{
+    height: 16px;
+    width: 100%;
+    display: flex;
+
+  }
+  .post__conteudoAnexado__infoAudio__text{
+    height: 16px;
+    width: 100px;
+    font-size: 12px;
+    color: #377ACF;
+    margin-left: 10px;
+    margin-top: 0px;
+    display: inline-block;
+    line-height: auto;
+    
+  
+  }
+  .post__conteudoAnexado__infoAudio__cont img{
+    height: 16px;
+    width: 16px;
+  }
+  .post__conteudoAnexado__infoAudio_subtitulo{
+    height: 14px;
+    font-size: 10px;
+    color: #373737;
+    margin-left: 26px;
+  }
+  
+
+  .post__conteudoAnexado__infoAudio__audio{
+    width: 190px;
+    height: 6px;
+    background-color: #9EC2EF;
+    border-radius: 14px;
+    display: inline-block;
+    margin-top: 24px;
+    margin-left: 7px;
+  
+  }
+  .tempo_inicio{
+    margin-top: 20px;
+    font-size: 8px;
+    color: #373737;
+    display: inline-block;
+   
+  }
+  .tempo_fim{
+    margin-top: 20px;
+    font-size: 8px;
+    color: #373737;
+    display: inline-block;
+    margin-left: 7px;
+
+  }
+  .audio_marcacao{
+    width: 50px;
+    height: 100%;
+    border-radius: 14px;
+    background-color: #377ACF;
+    
+  }
+
+  
+  
+
+  
+  /* tag post texto */
+  .texto{
+   display: none;
+    height: 100px;
+    
+  
+  
+  
+  }
+ 
+  .post__conteudoAnexado--texto{
+    width: 300px;
+    margin:auto auto auto auto;
+  
+  }
+  .post__conteudoAnexado__titulo--texto{
+    color: #377ACF;
+  }
+  .post__conteudoAnexado__subtitulo--texto{
+    font-size: 10px;
+    margin-top: 2px;
+    color: #373737;
+  }
+
+
+
+.foto{
+  display: none;
+}
+      
 
 
 /* Shows */
