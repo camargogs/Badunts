@@ -13,11 +13,10 @@ export class LoginComponent implements OnInit {
   email1: string
   senha1: string
   rota: string
+  
   ngOnInit() {
     var user = JSON.parse(localStorage.getItem("contratantes"));
     var card = JSON.parse(localStorage.getItem("musicos"));
-    console.log(user);
-    console.log(card);
   }
   onSumit(email1,senha1){
     var contratantes = JSON.parse(localStorage.getItem("contratantes"));

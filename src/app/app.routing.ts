@@ -38,7 +38,7 @@ const APP_ROUTES: Routes = [
 {path:"eventoeve", component:EventosEventoComponent},
 {path:"eventoeve2", component:EventosEvento2Component},
 {path:"perfilContratante",component:PerfilContratanteComponent},
-{path:"shows", component:PerfilMusicoShowsComponent},
+// {path:"shows", component:PerfilMusicoShowsComponent},
 {path:"agenda", component:PerfilMusicoAgendaComponent},
 {path:"avaliacoes", component:PerfilMusicoAvaliacoesComponent}
 ]
