@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { and } from '@angular/router/src/utils/collection';
 
 @Component({
-  selector: 'app-perfil-musico',
-  templateUrl: './perfil-musico.component.html',
-  styleUrls: ['./perfil-musico.component.css']
+  selector: 'app-perfil-contratante',
+  templateUrl: './perfil-contratante.component.html',
+  styleUrls: ['./perfil-contratante.component.css']
 })
-export class PerfilMusicoComponent implements OnInit {
+export class PerfilContratanteComponent implements OnInit {
+
   tagvideo:boolean;
   tagaudio:boolean;
   tagtexto:boolean;
@@ -17,33 +19,15 @@ export class PerfilMusicoComponent implements OnInit {
   texto:string;
   todo:string;
 
-  agendaId: string;
-  avaliacao: number;
-  carteiraId: string;
-  cep: number;
-  cidade: string;
-  conta: string;
-  cpf: string;
-  email: string;
-  endereco: string;
-  genero: string;
-  musicoId: string;
-  nome: string;
-  rg: string;
-  senha: string;
-  tipo: string;
-  usuario: string;
-
   constructor() { }
 
   ngOnInit() {
-    var user = JSON.parse(localStorage.getItem("atual"));
+    var user = JSON.parse(localStorage.getItem("contratantes"));
+    var card = JSON.parse(localStorage.getItem("cartaos"));
     console.log(user);
-    this.nome = user.nome;
-    this.cidade = user.cidade;
-    this.genero = user.genero;
-    this.avaliacao = user.avaliacao; 
+    console.log(card);
   }
+ 
   alterarTagVideo(){
     if((this.tagvideo=true)&& (this.video = 'block')){
       this.tagaudio=false;
@@ -116,5 +100,5 @@ export class PerfilMusicoComponent implements OnInit {
       }
   
 }
-
 }
+

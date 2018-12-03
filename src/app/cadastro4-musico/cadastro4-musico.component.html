@@ -4,10 +4,10 @@
     </div>
     <div>
       <Form class="form">
-        <input class="form__textInput" type="text" placeholder="Titular">
-        <input class="form__textInput" type="text" placeholder="Banda">
-        <input class="form__textInput" type="text" placeholder="Número da conta">
-        <input class="form__textInput" type="text" placeholder="Agência">
+        <input class="form__textInput" type="text" placeholder="Titular" [(ngModel)] = "titular" required>
+        <input class="form__textInput" type="text" placeholder="Bandeira" [(ngModel)] = "bandeira" required>
+        <input class="form__textInput" type="text" placeholder="Número da conta" [(ngModel)] = "numero" required>
+        <input class="form__textInput" type="text" placeholder="Agência" [(ngModel)] = "agencia" required>
       </Form>
     </div>
     <div class="footer__btn">
@@ -17,7 +17,7 @@
         <div class="dot"></div>
         <div class="dot dot--active"></div>
       </div>
-      <button class="btn__default">Avançar</button>
+      <button class="btn__default" routerLink ="/perfilMusico" (click) = "cardPart4(titular,bandeira,numero,agencia)">Avançar</button>
     </div>
   </div>
   
