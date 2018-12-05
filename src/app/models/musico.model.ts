@@ -1,6 +1,6 @@
 export class Musico{
     constructor(
-        public musicoId: string,
+        public musicoId: number,
         public nome: string,
         public usuario: string,
         public email: string,
@@ -17,7 +17,8 @@ export class Musico{
         public cep: number,
         public genero:string[],
         public tipo: string,
-        public conta: number
+        public conta: number,
+        public foto: string
     ){    
     }
 }

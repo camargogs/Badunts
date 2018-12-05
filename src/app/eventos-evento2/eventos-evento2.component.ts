@@ -1,3 +1,5 @@
+import { Musico } from './../models/musico.model';
+import { Contrato } from './../models/contrato.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,8 +10,24 @@ import { Component, OnInit } from '@angular/core';
 export class EventosEvento2Component implements OnInit {
 
   constructor() { }
-
+  contratos: Contrato[] = [];
+  contrato: Contrato={
+    "musicoId":0,"contratanteId":0,"status":""
+  };
+  musicos: Musico [] = [];
+  status: string;
+  musicos_con: Musico [] = [];
   ngOnInit() {
+    this.contratos = JSON.parse(localStorage.getItem("contratos"));
+    this.musicos = JSON.parse(localStorage.getItem("musicos"));
+    for (let index = 0; index < this.contratos.length; index++) {
+      for (let i = 0; i < this.musicos.length; i++) {
+        if(this.contratos[index].musicoId = this.musicos[i].musicoId){
+          this.musicos_con.push(this.musicos[i]);
+          this.status = this.contratos[index].status;
+        }
+      }
+    }
   }
 
 }

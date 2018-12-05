@@ -1,6 +1,6 @@
 export class Contratante{
     constructor(
-        public contratanteId: string,
+        public contratanteId: number,
         public nome: string,
         public usuario: string,
         public email: string,

@@ -25,6 +25,7 @@ import { EventosEvento2Component } from './eventos-evento2/eventos-evento2.compo
 import { EventosContratoComponent } from './eventos-contrato/eventos-contrato.component';
 import { PopupAvaliacaoComponent } from './popup-avaliacao/popup-avaliacao.component';
 import { PerfilContratanteComponent } from './perfil-contratante/perfil-contratante.component';
+import { BuscarMusicoComponent } from './buscar-musico/buscar-musico.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { PerfilContratanteComponent } from './perfil-contratante/perfil-contrata
     EventosContratoComponent,
     PopupAvaliacaoComponent,
     PerfilContratanteComponent,
+    BuscarMusicoComponent,
   ],
   imports: [
     BrowserModule,

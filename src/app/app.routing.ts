@@ -1,3 +1,5 @@
+import { BuscarMusicoComponent } from './buscar-musico/buscar-musico.component';
+import { EventosContratoComponent } from './eventos-contrato/eventos-contrato.component';
 import { EventosEventoComponent } from './eventos-evento/eventos-evento.component';
 import { EventosEvento2Component } from './eventos-evento2/eventos-evento2.component';
 import { EventosCadastroComponent } from './eventos-cadastro/eventos-cadastro.component';
@@ -17,6 +19,7 @@ import { Cadastro2Component } from './cadastro2/cadastro2.component';
 import { Cadastro4MusicoComponent } from './cadastro4-musico/cadastro4-musico.component';
 import { Cadastro4ContratanteComponent } from './cadastro4-contratante/cadastro4-contratante.component';
 import { Cadastro3MusicoComponent } from './cadastro3-musico/cadastro3-musico.component';
+
 
 const APP_ROUTES: Routes = [
 {path:"", redirectTo:"login", pathMatch:"full"},
@@ -41,7 +44,9 @@ const APP_ROUTES: Routes = [
 // {path:"shows", component:PerfilMusicoShowsComponent},
 {path:"agenda", component:PerfilMusicoAgendaComponent},
 {path:"avaliacoes", component:PerfilMusicoAvaliacoesComponent},
-{path:"eventos/eventoeve/:id", component:EventosEventoComponent }
+{path:"eventos/eventoeve/:id", component:EventosEventoComponent},
+{path:"buscamusi/eventocontra/:id", component:EventosContratoComponent},
+{path:"buscamusi",component:BuscarMusicoComponent}
 ]
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

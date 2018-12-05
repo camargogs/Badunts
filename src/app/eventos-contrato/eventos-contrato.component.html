@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="upperbar">
-    <div><img src="../../assets/images/close.svg"></div>
+    <div routerLink="/buscamusi"><img src="../../assets/images/close.svg"></div>
     <p>Contrato</p>
   </div>
 
@@ -28,9 +28,9 @@
     </div>
   </div>
   <div class="btn__list">
-    <button class="btn__default btn__decline">Recusar</button>
+    <button class="btn__default btn__decline" routerLink="/buscamusi">Recusar</button>
     <div></div>
-    <button class="btn__default">Aceitar</button>
+    <button class="btn__default" (click)="aceitaContrato()" routerLink="/buscamusi">Aceitar</button>
   </div>
 
 </div>

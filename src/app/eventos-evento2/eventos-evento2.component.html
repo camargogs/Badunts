@@ -8,7 +8,7 @@
     <label>Músicos contratados</label>
   </div>
 
-  <ul class="musicos">
+  <ul class="musicos" *ngFor= "let m of musicos_con">
     <li class="musico">
       <div>
         <img src="" class="foto">
@@ -16,13 +16,16 @@
       <div class="infos">
         <div></div>
         <p class="nome">
-          <b>Indiejgesto</b>
+          <b>{{ m.nome }}</b>
         </p>
         <div class="local tags">
-          <div>pop</div>
-          <div>jazz</div>
+          <div>{{ m.genero }}</div>
         </div>
+        <p class="local">
+          <b>{{ status }}</b>
+        </p>
       </div>
+     
       <div class="preco">
         <div></div>
         <div>
@@ -33,7 +36,7 @@
     </li>
   </ul>
 
-  <div class="btn__add">
+  <div class="btn__add" routerLink = "/buscamusi">
     <div>
       <div></div>
       <div></div>

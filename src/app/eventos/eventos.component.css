@@ -454,3 +454,12 @@ footer>div>img:nth-child(2) {
   background: linear-gradient(#9EC2EF, #377ACF);
   border: 0;
 }
+.arrow_back{
+  width: 30px;
+  height: 0;
+}
+
+.arrow_back img{
+  height: 15px;
+  padding: 15px;
+}
