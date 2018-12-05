@@ -19,15 +19,35 @@ export class PerfilContratanteComponent implements OnInit {
   texto:string;
   todo:string;
 
+  agendaId: string;
+  avaliacao: number;
+  carteiraId: string;
+  cep: number;
+  cidade: string;
+  conta: string;
+  cpf: string;
+  email: string;
+  endereco: string;
+  genero: string;
+  musicoId: string;
+  nome: string;
+  rg: string;
+  senha: string;
+  tipo: string;
+  usuario: string;
+  estabelecimento: string;
+
   constructor() { }
 
   ngOnInit() {
-    var user = JSON.parse(localStorage.getItem("contratantes"));
-    var card = JSON.parse(localStorage.getItem("cartaos"));
-    console.log(user);
-    console.log(card);
+    var user = JSON.parse(localStorage.getItem("atual"));
+    this.nome = user.nome;
+    this.cidade = user.cidade;
+    this.genero = user.genero;
+    this.avaliacao = user.avaliacao;
+    this.estabelecimento = user.estabelecimento;
   }
- 
+  
   alterarTagVideo(){
     if((this.tagvideo=true)&& (this.video = 'block')){
       this.tagaudio=false;

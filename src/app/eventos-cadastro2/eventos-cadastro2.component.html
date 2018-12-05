@@ -15,13 +15,13 @@
 
     <div class="capaPerfil__dados">
       <div class="capaPerfil__dados__nome">
-        <p>Nome do evento</p>
+        <p>{{ nome }}</p>
       </div>
       <div class="capaPerfil__dados__endereco">
-        <p>Rua do evento, bairro tambem, 0000</p>
+        <p>{{ endereco }}</p>
       </div>
       <div class="capaPerfil__dados__endereco">
-        <p>dd/mm/aaaa de 00:00 ás 22:00</p>
+        <p>{{ data }} de {{ hora_ini }} às {{ hora_fim }}</p>
       </div>
     </div>
 
@@ -32,18 +32,18 @@
   </div>
 
   <Form class="form">
-    <input class="form__textInput" type="text" placeholder="Descrição do evento">
+    <input class="form__textInput" type="text" placeholder="Descrição do evento" [(ngModel)] = "descricao">
   </Form>
   <label>informações adicionais</label>
   <Form class="form">
-    <input class="form__textInput" type="text" placeholder="Infomação adicional">
+    <input class="form__textInput" type="text" placeholder="Infomação adicional" [(ngModel)] = "detalhes">
   </Form>
 
-  <button class="btn__default">Criar Evento</button>
+  <button class="btn__default" routerLink = "/eventos" (click)="eventoCad2(descricao,detalhes)">Criar Evento</button>
 
   <div class="footer__btn">
     <div class="dots">
-      <div class="dot"></div>
+      <div class="dot" routerLink ="/eventocad"></div>
       <div class="dot dot--active"></div>
     </div>
   </div>

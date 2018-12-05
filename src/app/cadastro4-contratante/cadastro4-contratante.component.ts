@@ -40,6 +40,7 @@ export class Cadastro4ContratanteComponent implements OnInit {
     this.cartao.data = data;
     this.contratantes.push(user);
     this.cartaos.push(this.cartao);
+    localStorage.setItem("atual", JSON.stringify(user));
     localStorage.setItem("contratantes", JSON.stringify(this.contratantes));
     localStorage.setItem("cartaos", JSON.stringify(this.cartaos));
   }

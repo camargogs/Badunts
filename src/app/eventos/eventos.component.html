@@ -4,7 +4,7 @@
     <p>Evento</p>
   </div>
 
-  <ul class="musicos">
+  <ul *ngFor = " let e of eventos" class="musicos"  [routerLink]= "['eventoeve' , e.eventoId]" > 
     <li class="musico">
       <div>
         <img src="" class="foto">
@@ -12,25 +12,25 @@
       <div class="infos">
         <div></div>
         <p class="nome">
-          <b>Júlia Pacheco</b>
+          <b>{{nome}}</b>
         </p>
         <p class="local">
-          Rua Ciro Gomes, Bairro Presidente, 12
+          {{endereco}} 
         </p>
       </div>
       <div class="preco">
         <div></div>
         <div class="data">
-          <p> 10/10 </p>
+          <p> {{e.data}} </p>
         </div>
         <div class="hora">
-          <p>20:00</p>
+          <p>{{e.hora_ini}}</p>
         </div>
       </div>
     </li>
   </ul>
 
-  <div class="btn__add">
+  <div class="btn__add" routerLink = "/eventocad">
     <div>
       <div></div>
       <div></div>
@@ -45,7 +45,7 @@
 
 <footer>
   <div>
-    <img src="../../assets/images/home-inativo.svg" alt="" routerLink = "/perfilMusico">
+    <img src="../../assets/images/home-inativo.svg" alt="" routerLink ="{{ rota }}">
     <img src="../../assets/images/propostas-ativo.svg" alt=""  routerLink="/eventos">
     <img src="../../assets/images/perfilMenu-inativo.svg" alt="">
   </div>

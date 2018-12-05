@@ -1,18 +1,18 @@
 <nav class="nav__tabs">
-    <div class="nav__tabs__contratante">
+    <div class="nav__tabs__contratante" >
       <div class="nav__tabs__contratante--preActive">
-        <div></div> <img src="../../assets/images/arrow-point-to-right.png">
+        <div></div> <img src="../../assets/images/arrow-point-to-right.svg" routerLink = "/login">
       </div>
       <div  class="nav__tabs__contratante--active">
-        <div></div> <img src="../../assets/images/profiles-ativo.png">
+        <div></div> <img src="../../assets/images/perfil-ativo.svg">
         <p>Perfil</p>
       </div>
       <div>
-        <div></div> <img src="../../assets/images/calendar-inativo.png">
+        <div></div> <img src="../../assets/images/calendar-inativo.svg">
         <p>Agenda</p>
       </div>
       <div>
-        <div></div> <img src="../../assets/images/star-inativo.png">
+        <div></div> <img src="../../assets/images/star-inativo.svg">
         <p>Avaliações</p>
       </div>
     </div>
@@ -26,19 +26,19 @@
   
       <div class="capaPerfil__dados">
         <div class="capaPerfil__dados__nome">
-          <p>Pinup </p>
+          <p>{{ estabelecimento }} </p>
         </div>
         <div class="capaPerfil__dados__tag">
-          <p>Rock</p>
+          <p>{{ genero }}</p>
         </div>
         <div class="capaPerfil__dados__endereco">
-          <p>Sobral-CE</p>
+          <p>{{ cidade }}</p>
         </div>
       </div>
   
       <div class="capaPerfil__linha__avaliacaoContratente">
-        <p>5.0</p>
-        <img src="../../assets/images/star-orange.png">
+        <p>{{ avaliacao }}</p>
+        <img src="../../assets/images/star-orange.svg">
       </div>
   
     </div>
@@ -188,9 +188,9 @@
   
   <footer>
     <div>
-      <img src="../../assets/images/home inativo.png" alt="">
-      <img src="../../assets/images/propostas inativo.png" alt="">
-      <img src="../../assets/images/perfil ativo.png" alt="">
+      <img src="../../assets/images/home-ativo.svg" alt="" routerLink = "/perfilContratante">
+      <img src="../../assets/images/propostas-inativo.svg" alt="" routerLink="/eventos">
+      <img src="../../assets/images/perfilMenu-inativo.svg" alt="">
     </div>
   </footer>
   

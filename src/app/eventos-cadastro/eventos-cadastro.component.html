@@ -5,36 +5,32 @@
   </div>
 
   <Form class="form">
-    <input class="form__textInput" type="text" placeholder="Nome do evento">
-    <input class="form__textInput" type="text" placeholder="Data">
+    <input class="form__textInput" type="text" placeholder="Nome do evento" [(ngModel)] = "nome">
+    <input class="form__textInput" type="text" placeholder="Data"[(ngModel)] = "data">
     <div>
-      <input class="form__textInput" type="text" placeholder="Hora de início">
+      <input class="form__textInput" type="text" placeholder="Hora de início" [(ngModel)] = "hora_ini">
       <div></div>
-      <input class="form__textInput" type="text" placeholder="Hora de termino">
+      <input class="form__textInput" type="text" placeholder="Hora de termino" [(ngModel)] = "hora_fim">
     </div>
   </Form>
 
 
   <label>Equipamentos</label>
   <div style="margin: 15px auto 37px auto;">
-    <div class=btn__addTag>
-      <div></div>
-      <div></div>
-    </div>
+    <form class ="form">
+      <input class="form__textInput" type="text" name="equipamentos" [(ngModel)] = "equipamentos">
+    </form>
   </div>
 
   <label>Gêneros</label>
   <div style="margin: 15px auto 37px auto;">
-    <div class=btn__addTag>
-      <div></div>
-      <div></div>
-    </div>
+    <input class="form__textInput" type="text" name="generos" [(ngModel)] = "genero">
   </div>
 
   <div class="footer__btn">
     <div class="dots">
       <div class="dot dot--active"></div>
-      <div class="dot"></div>
+      <div class="dot" (click)="eventoCad1(nome,data,hora_ini,hora_fim, equipamentos, genero)" routerLink ="/eventocad2"></div>
     </div>
   </div>
 

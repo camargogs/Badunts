@@ -40,7 +40,8 @@ const APP_ROUTES: Routes = [
 {path:"perfilContratante",component:PerfilContratanteComponent},
 // {path:"shows", component:PerfilMusicoShowsComponent},
 {path:"agenda", component:PerfilMusicoAgendaComponent},
-{path:"avaliacoes", component:PerfilMusicoAvaliacoesComponent}
+{path:"avaliacoes", component:PerfilMusicoAvaliacoesComponent},
+{path:"eventos/eventoeve/:id", component:EventosEventoComponent }
 ]
 
 export const routing = RouterModule.forRoot(APP_ROUTES);
