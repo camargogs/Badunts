@@ -46,6 +46,7 @@ const APP_ROUTES: Routes = [
 {path:"avaliacoes", component:PerfilMusicoAvaliacoesComponent},
 {path:"eventos/eventoeve/:id", component:EventosEventoComponent},
 {path:"buscamusi/eventocontra/:id", component:EventosContratoComponent},
+{path:"eventocontra", component:EventosContratoComponent},
 {path:"buscamusi",component:BuscarMusicoComponent}
 ]
 

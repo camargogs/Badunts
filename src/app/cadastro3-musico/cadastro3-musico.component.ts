@@ -13,6 +13,9 @@ export class Cadastro3MusicoComponent implements OnInit {
   tipo2:boolean;
   tipo3:boolean;
   
+
+
+
   ngOnInit() {
     
  

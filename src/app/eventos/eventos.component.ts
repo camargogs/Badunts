@@ -13,6 +13,7 @@ export class EventosComponent implements OnInit {
   eventos: Evento[] = [];
   nome: string;
   endereco: string;
+  add: string;
   ngOnInit() {
     var atual = JSON.parse(localStorage.getItem("atual"));
     this.nome = atual.nome;
@@ -22,11 +23,13 @@ export class EventosComponent implements OnInit {
       this.eventos[index].eventoId = index + 1;
     }
     localStorage.setItem("eventos", JSON.stringify(this.eventos));
-     if(atual.musicoId == ""){
+     if(atual.musicoId){
       this.rota = "/perfilMusico";
+      this.add ="";
      } 
-     if(atual.contratanteId == ""){
+     if(atual.contratanteId==""){
       this.rota = "/perfilContratante";
+      this.add = "btn__add";
      }
   }
 }

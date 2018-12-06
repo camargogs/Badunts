@@ -18,7 +18,14 @@ export class Musico{
         public genero:string[],
         public tipo: string,
         public conta: number,
-        public foto: string
+        public video: string,
+        public audio: string,
+        public descricao: string,
+        public foto: string,
+        public letras: string,
+        public nome_show: string,
+        public hora_preco: number,
+        public detalhe_show: string
     ){    
     }
 }

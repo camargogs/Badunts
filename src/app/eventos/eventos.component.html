@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="upperbar">
-    <p>Evento</p>
+    <p>Eventos</p>
   </div>
 
   <ul *ngFor = " let e of eventos" class="musicos"  [routerLink]= "['eventoeve' , e.eventoId]" > 
@@ -29,13 +29,14 @@
       </div>
     </li>
   </ul>
-
-  <div class="btn__add" routerLink = "/eventocad">
-    <div>
-      <div></div>
-      <div></div>
+    <div  class="{{ add }}" routerLink = "/eventocad">
+      <div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
-  </div>
+
+  
 
   <div class="messege">
     <p>Clique no + para criar um novo evento!</p>

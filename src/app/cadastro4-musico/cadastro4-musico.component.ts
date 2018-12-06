@@ -19,20 +19,27 @@ export class Cadastro4MusicoComponent implements OnInit {
   numero:number;
   agencia:number;
 
+
+
   ngOnInit() {
     var user = JSON.parse(localStorage.getItem("musico"));
     console.log(user);
   }
 
   cardPart4(titular,bandeira,numero,agencia){
+    this.musicos = JSON.parse(localStorage.getItem("musicos"));
+    if(this.musicos==null){
+      this.musicos = [];
+    }
     var user = JSON.parse(localStorage.getItem("musico"));
     this.conta.titular = titular;
     this.conta.bandeira = bandeira;
     this.conta.numero = numero;
     this.conta.agencia = agencia;
     user.cartao = numero;
-    this.contas.push(this.conta);
+    user.musicoId = this.musicos.length;
     this.musicos.push(user);
+    console.log(user);
     localStorage.setItem("musicos", JSON.stringify(this.musicos));
     localStorage.setItem("atual", JSON.stringify(user));
     localStorage.setItem("contas", JSON.stringify(this.contas));

@@ -25,7 +25,7 @@
 <div class="container">
   <div class="showType">
     <div>
-      <div class="showType__showImage"></div>
+      <div class="showType__showImage"><img src="{{ perfil }}" alt=""></div>
       <div>
         <p class="showType__title">Voz e Violão</p>
         <div></div>
@@ -44,9 +44,16 @@
       exercitation ullamco laboris nisi ut aliquip
       ex ea commodo consequat.</div>
 
-    <div><button class="showType__button">contratar</button></div>
   </div>
-
+  <div><button class="showType__button" (click) = "add_show(nome_show,preco,descricao)">adicionar</button></div>
+  <form action="">
+    <label for="nome_show">Nome do show</label>
+    <input type="text" name="nome_show" [(ngModel)] = "nome_show">
+    <label for="preco_hora">Preço da hora</label>
+    <input type="text" name="preco_hora" [(ngModel)] = "preco">
+    <label for="descricao">Descrição do show</label>
+    <input type="text" name="descricao" [(ngModel)] = "descricao">
+  </form>
 </div>
 
 <footer>
