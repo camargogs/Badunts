@@ -616,3 +616,9 @@ input[type='file'] {
   width: 56px;
   height: 56px;
 }
+.form_show{
+  width: 300px;
+}
+.form_show input{
+  width: 300px;
+}

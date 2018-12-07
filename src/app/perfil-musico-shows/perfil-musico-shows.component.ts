@@ -15,17 +15,29 @@ export class PerfilMusicoShowsComponent implements OnInit {
   preco: number;
   perfil: string;
   descricao: string;
-  novo: Musico;
 
   ngOnInit() {
     var user = JSON.parse(localStorage.getItem("atual"));
+    this.nome_show = user.nome_show;
+    this.genero = user.genero;
+    this.preco = user.hora_preco;
     this.perfil = user.agendaId;
+    this.descricao = user.detalhe_show;
     
+   
   }
 
   add_show(nome_show,preco,descricao){
     var user = JSON.parse(localStorage.getItem("atual"));
+    user.nome_show = nome_show;
+    user.hora_preco = preco;
+    user.detalhe_show = descricao;
+    localStorage.setItem("atual", JSON.stringify(user));
+    nome_show = "";
+    preco = "";
+    descricao = "";
     
+
   }
 
 }
