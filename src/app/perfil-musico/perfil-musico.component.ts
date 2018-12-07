@@ -61,7 +61,7 @@ export class PerfilMusicoComponent implements OnInit {
     this.rota_img = "../../assets/images/propostas-inativo.svg"
     var user = JSON.parse(localStorage.getItem("atual"));
     this.descricao_bio = user.descricao;
- 
+    
     console.log(user);
     this.nome = user.nome;
     this.cidade = user.cidade;
@@ -72,6 +72,7 @@ export class PerfilMusicoComponent implements OnInit {
     this.video_port = user.video;
     this.audio_port = user.audio;
     this.fotos_port = user.fotos; 
+    console.log(this.contratos);
     for (let index = 0; index < this.contratos.length; index++) {
       if(this.contratos[index].musicoId== user.musicoId){
         if(this.contratos[index].status =="Pendente"){

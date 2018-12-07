@@ -46,6 +46,7 @@ export class PerfilContratanteComponent implements OnInit {
     this.genero = user.genero;
     this.avaliacao = user.avaliacao;
     this.estabelecimento = user.estabelecimento;
+    console.log(user);
   }
   
   alterarTagVideo(){

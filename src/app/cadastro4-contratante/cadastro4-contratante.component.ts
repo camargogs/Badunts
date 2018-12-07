@@ -25,13 +25,16 @@ export class Cadastro4ContratanteComponent implements OnInit {
   }
 
   cadCardPart4(titular,numero,bandeira,cod,data){
-    console.log(titular);
     this.titular = titular;
     this.numero = numero;
     this.bandeira = bandeira;
     this.cod = cod;
     this.data = data;
     var user = JSON.parse(localStorage.getItem("contratante"));
+    this.contratantes = JSON.parse(localStorage.getItem("contratantes"));
+    if(this.contratantes==null){
+      this.contratantes = [];
+    }
     user.cartao = numero;
     this.cartao.titular = titular;
     this.cartao.numero = numero;

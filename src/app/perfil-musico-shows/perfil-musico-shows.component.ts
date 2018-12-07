@@ -10,6 +10,9 @@ export class PerfilMusicoShowsComponent implements OnInit {
 
   constructor() { }
 
+
+  add: boolean;
+  show: boolean = true;
   nome_show: string;
   genero: string;
   preco: number;
@@ -23,8 +26,9 @@ export class PerfilMusicoShowsComponent implements OnInit {
     this.preco = user.hora_preco;
     this.perfil = user.agendaId;
     this.descricao = user.detalhe_show;
-    
-   
+    if(this.nome_show==""&&this.descricao==""){
+      this.add = true;
+    }
   }
 
   add_show(nome_show,preco,descricao){
@@ -36,8 +40,17 @@ export class PerfilMusicoShowsComponent implements OnInit {
     nome_show = "";
     preco = "";
     descricao = "";
-    
-
+    this.add = true;
+    if(this.add){
+      this.add = false;
+      this.show = true;
+    }
+  }
+  adicionar(){
+    if(this.show){
+      this.show = false;
+      this.add = true;
+    }
   }
 
 }

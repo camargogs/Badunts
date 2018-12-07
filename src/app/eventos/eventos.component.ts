@@ -19,6 +19,9 @@ export class EventosComponent implements OnInit {
     this.nome = atual.nome;
     this.endereco = atual.endereco;
     this.eventos = JSON.parse(localStorage.getItem("eventos"));
+    if(this.eventos==null){
+      this.eventos =[];
+    }
     for (let index = 0; index < this.eventos.length; index++) {
       this.eventos[index].eventoId = index + 1;
     }

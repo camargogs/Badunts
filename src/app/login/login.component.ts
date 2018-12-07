@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   tipo2: boolean;
 
   ngOnInit() {
+  
     var user = JSON.parse(localStorage.getItem("contratantes"));
     var card = JSON.parse(localStorage.getItem("musicos"));
     var card = JSON.parse(localStorage.getItem("musicos"));
@@ -40,6 +41,12 @@ export class LoginComponent implements OnInit {
     var contratantes = JSON.parse(localStorage.getItem("contratantes"));
     var musicos = JSON.parse(localStorage.getItem("musicos"));
     console.log(musicos);
+    if(musicos==null){
+      musicos = []
+    }
+    if(contratantes==null){
+      contratantes=null;
+    }
     for (let index = 0; index < musicos.length; index++) {
       if(musicos[index].email==email1&&musicos[index].senha==senha1){
         localStorage.setItem("atual", JSON.stringify(musicos[index]));
