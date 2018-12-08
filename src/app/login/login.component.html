@@ -1,12 +1,23 @@
 <div class="login">
   <img class="logo" src="../../assets/images/Group 95.png" alt="">
 
-  <input type="text" class="input" placeholder="E-mail">
+  <input type="text"
+  [(ngModel)]="email1"
+  class="input"  
+  placeholder="E-mail">
 
-  <input type="text" class="input top" placeholder="Senha">
+  <input type="password" [(ngModel)]= "senha1" class="input top" placeholder="Senha" >
+  <Form class="form">
+    <div class="form__radio" [class.form__radio--checked]="tipo1" (click)= "onClickMusico()">
+      <div></div><label>Musico</label>
+    </div>
 
+    <div class="form__radio"  [class.form__radio--checked]="tipo2" (click) = "onClickContratante()">
+      <div></div><label>Contratante</label>
+    </div>
+  </Form>
   <div class="botoes">
-    <button class="botao">Entrar</button>
-    <button class="botao">Cadastrar</button>
+    <button (click)="onSumit(email1,senha1)" routerLink ="{{ rota }}" class="botao">Entrar</button>
+    <button class="botao" routerLink = "/cadastrar">Cadastrar</button>
   </div>
 </div>

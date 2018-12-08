@@ -1,0 +1,65 @@
+<div class="container">
+
+  <div class="upperbar">
+    <p>Evento</p>
+  </div>
+
+  <div class="eventoInfo">
+    <label>Músicos contratados</label>
+  </div>
+
+  <ul class="musicos" *ngFor= "let m of musicos_con" routerLink = "{{ rota }}">
+    <li class="musico">
+      <div>
+        <img src="{{ m.agendaId }}" class="foto">
+      </div>
+      <div class="infos">
+        <div></div>
+        <p class="nome">
+          <b>{{ m.nome }}</b>
+        </p>
+        <div class="local tags">
+          <div>{{ m.genero }}</div>
+        </div>
+        <p class="local">
+          <b>{{ status }}</b>
+        </p>
+      </div>
+     
+      <div class="preco">
+        <div></div>
+        <div>
+          <img src="../../assets/images/chat.svg">
+          <img src="../../assets/images/contract.svg">
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="{{btn_add}}" routerLink = "/buscamusi">
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="messege" >
+    <p [class.btn_add]="menssage">Clique no + para contratar um músico!</p>
+  </div>
+
+  <div class="footer__btn">
+    <div class="dots">
+      <div class="dot" routerLink = "/eventos"></div>
+      <div class="dot dot--active"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <img src="../../assets/images/home-inativo.svg" alt="">
+    <img src="../../assets/images/propostas-ativo.svg" alt="">
+    <img src="../../assets/images/perfilMenu-inativo.svg" alt="">
+  </div>
+</footer>

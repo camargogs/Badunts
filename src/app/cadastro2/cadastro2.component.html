@@ -1,0 +1,24 @@
+<div class="container">
+  <div>
+    <img class="logo" src="..\..\assets\images\logo.png" alt="">
+  </div>
+  <div>
+    <Form class="form">
+      <input class="form__textInput" type="text" placeholder="RG" [(ngModel)] = "rg" required>
+      <input class="form__textInput" type="text" placeholder="CPF" [(ngModel)] = "cpf" required>
+      <input class="form__textInput" type="text" placeholder="Cidade" [(ngModel)] = "cidade" required>
+      <input class="form__textInput" type="text" placeholder="Endereço" [(ngModel)] = "endereco" required>
+      <input class="form__textInput" type="text" placeholder="CEP" [(ngModel)] = "cep">
+    </Form>
+  </div>
+  <div class="footer__btn">
+    <div class="dots">
+      <div class="dot" routerLink="/cadastrar"></div>
+      <div class="dot dot--active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <button class="btn__default" [class.btn_none] ="active1" routerLink = "/cadastrar3musi" (click)="cardPart2(rg,cpf,cidade,endereco,cep)">Avançar</button>
+    <button class="btn__default" [class.btn_none] ="active2" routerLink = "/cadastrar3contra" (click)="cardPart2(rg,cpf,cidade,endereco,cep)">Avançar</button>
+  </div>
+</div>

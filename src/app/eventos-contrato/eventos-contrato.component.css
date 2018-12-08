@@ -1,0 +1,125 @@
+* {
+  padding: 0px;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: calc(100vh - 63px);
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  display: grid;
+  grid-template-rows: 54px auto 60px;
+}
+
+.container>* {
+  display: block;
+  width: 289px;
+  margin: auto;
+}
+
+.container>.musicos {
+  width: 100vw;
+}
+
+.container>.upperbar {
+  display: grid;
+  grid-template-columns: 15% 65%;
+  width: 100vw;
+  height: 54px;
+  background-color: #171717;
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  box-sizing: border-box;
+}
+
+
+.upperbar>div {
+  margin-top: calc(50% - 10px); 
+  height: 20px;
+  border-right: 2px solid rgba(235, 235, 235, 0.5);
+}
+.upperbar>div>img{
+  padding-left: calc(50% - 9px);
+  width: 18px;
+  height: 18px;
+}
+.upperbar>p {
+  padding-bottom:5px;
+  width: 80px;
+  margin: auto;
+  font-size: 26px;
+  font-weight: 800;
+  color: #EBEBEB;
+}
+
+
+.container>.contrato{
+  margin: 0;
+  width: 100%;
+}
+.contrato__registro{
+  padding: 20px;
+  font-size: 16pt;
+  font-weight: 800;
+}
+.contrato__data{
+  font-size: 10pt;
+  font-weight: 100;
+  color: #ccc;
+}
+.contrato__contrato{
+  margin: auto;
+  width: 75%;
+  height: 370px;
+  overflow: scroll;
+  font-weight: 400;
+}
+
+
+.container>.btn__list{
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 125px auto 125px;
+}
+.btn__default {
+  border: 0;
+  width: 125px;
+  height: 31.21px;
+  display: block;
+  color: white;
+  border-radius: 4px;
+  background-color: #377acf;
+  box-shadow: 0px 3px 1px #17171710;
+}
+.btn__decline{
+  background-color: #f4736a;
+}
+
+
+footer {
+  position: relative;
+  background-color: #171717;
+  height: 63px;
+  box-shadow: 0 -3px 4px #00000020;
+}
+
+footer>div {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 110px auto 110px;
+  width: 100vw;
+  height: 60px;
+}
+
+footer>div>img {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+footer>div>img:nth-child(2) {
+  padding: 0;
+  width: 25.5px;
+  height: 34px;
+}

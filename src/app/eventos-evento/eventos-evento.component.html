@@ -1,0 +1,75 @@
+<div class="container">
+
+  <div class="upperbar" >
+    <div class="arrow_back">
+      <img src="../../assets/images/arrow-point-to-right.svg" routerLink = "/eventos">
+      </div>
+    <p>Evento</p>
+  </div>
+
+  <div class="capaPerfil">
+
+    <div class="capaPerfil__foto">
+      <div class=btn__addTag>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="capaPerfil__dados">
+      <div class="capaPerfil__dados__nome">
+        <p>{{ nome_evento }}</p>
+      </div>
+      <div class="capaPerfil__dados__endereco">
+        <p>{{ endereco }}</p>
+      </div>
+      <div class="capaPerfil__dados__endereco">
+        <p>{{ data }} de {{ hora_ini }} às {{ hora_fim }}</p>
+      </div>
+    </div>
+
+    <div class=btn__addTag>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="biosPerfil">
+    {{descricao}}
+  </div>
+
+  <div class="eventoInfo">
+
+    <label>Equipamento</label>
+    <div class="tags">
+      <div>{{ equipamentos }}</div>
+    </div>
+    <label>Gênero</label>
+    <div class="tags">
+      <div>{{ genero }}</div>
+    </div>
+
+    <label>Informações Extras</label>
+    <div class="extraInfo">
+      <img src="../../assets/images/exclamation.svg">
+      <div> {{ detalhes }}</div>
+    </div>
+
+  </div>
+
+  <div class="footer__btn">
+    <div class="dots">
+      <div class="dot dot--active"></div>
+      <div class="dot" routerLink = "/eventoeve2"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <img src="../../assets/images/home-inativo.svg" alt="">
+    <img src="../../assets/images/propostas-ativo.svg" alt="">
+    <img src="../../assets/images/perfilMenu-inativo.svg" alt="">
+  </div>
+</footer>

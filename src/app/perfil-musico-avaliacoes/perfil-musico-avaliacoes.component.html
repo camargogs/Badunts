@@ -1,0 +1,53 @@
+<nav class="nav__tabs">
+    <div class="nav__tabs__musico">
+      <div>
+        <div></div><img src="../../assets/images/arrow-point-to-right.svg">
+      </div>
+      <div routerLink ="/perfilMusico">
+        <div></div> <img src="../../assets/images/perfil-inativo.svg">
+        <p>Perfil</p>
+      </div>
+      <div routerLink ="/shows">
+        <div></div> <img src="../../assets/images/tickets-inativo.svg">
+        <p>Shows</p>
+      </div>
+      <div routerLink ="/agenda" class="nav__tabs__musico--preActive">
+        <div></div> <img src="../../assets/images/calendar-inativo.svg">
+        <p>Agenda</p>
+      </div>
+      <div routerLink ="/avaliacoes" class="nav__tabs__musico--active">
+        <div></div> <img src="../../assets/images/star-ativo.svg">
+        <p>Avaliações</p>
+      </div>
+    </div>
+</nav>
+
+<div class="container">
+  <div class="rating">
+
+    <div>
+      <div class="rating__perfilImage"><img src="{{ foto }}" alt=""></div>
+      <div>
+        <p class="rating__title">{{contratante}}</p>
+        Contratou um show de {{ nome_musi}}
+      </div>
+    </div>
+
+    <div class="rating__comment">{{comentario}}</div>
+
+    <div>
+      <div class="rating__stars">
+        <img src="../../assets/images/stars.png">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <img src="../../assets/images/home-ativo.svg" alt="" routerLink = "/perfilMusico">
+    <img src="../../assets/images/propostas-inativo.svg" alt=""  routerLink="/eventos">
+    <img src="../../assets/images/perfilMenu-inativo.svg" alt="">
+  </div>
+</footer>

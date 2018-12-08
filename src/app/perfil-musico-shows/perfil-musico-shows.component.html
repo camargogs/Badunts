@@ -1,0 +1,68 @@
+<nav class="nav__tabs">
+  <div class="nav__tabs__musico">
+    <div>
+      <div></div> <img src="../../assets/images/arrow-point-to-right.svg">
+    </div>    
+      <div routerLink ="/perfilMusico" class="nav__tabs__musico--preActive">
+        <div></div> <img src="../../assets/images/perfil-inativo.svg">
+        <p>Perfil</p>
+      </div>
+      <div routerLink ="/shows" class="nav__tabs__musico--active">
+        <div></div> <img src="../../assets/images/tickets-ativo.svg">
+        <p>Shows</p>
+      </div>
+      <div routerLink ="/agenda">
+        <div></div> <img src="../../assets/images/calendar-inativo.svg">
+        <p>Agenda</p>
+      </div>
+      <div routerLink ="/avaliacoes">
+        <div></div> <img src="../../assets/images/star-inativo.svg">
+        <p>Avaliações</p>
+      </div>
+    </div>
+</nav>
+<div  class="btn__add" (click)="adicionar()" >
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<div class="container">
+  <div class="showType" [class.input_editar] = "add" >
+    <div>
+      <div class="showType__showImage"><img src="{{ perfil }}" alt=""></div>
+      <div>
+        <p class="showType__title">{{nome_show}}</p>
+        <div></div>
+        <div class="showType__tag">{{genero[0]}}</div>
+      </div>
+      <div>
+        <p class="showType__price">{{preco}}</p>
+        hora de show
+      </div>
+    </div>
+
+    <div class="showType__description">{{descricao}}</div>
+
+  </div>
+ <div [class.input_editar] = "show">
+  <form class="form_show" action=""  >
+    <label for="nome_show"></label>
+    <input placeholder="Nome do show" type="text" name="nome_show" [(ngModel)] = "nome_show">
+    <label for="preco_hora"></label>
+    <input placeholder="Preço da hora" type="text" name="preco_hora" [(ngModel)] = "preco">
+    <label for="descricao"></label>
+    <input placeholder="Descrição do show" type="text" name="descricao" [(ngModel)] = "descricao">
+    <div><button class="showType__button" (click) = "add_show(nome_show,preco,descricao)">adicionar</button></div>
+  </form>
+ </div>
+  
+</div>
+
+<footer>
+  <div>
+    <img src="../../assets/images/home-ativo.svg" alt="" routerLink = "/perfilMusico">
+    <img src="../../assets/images/propostas-inativo.svg" alt=""  routerLink="/eventos">
+    <img src="../../assets/images/perfilMenu-inativo.svg" alt="">
+  </div>
+</footer>

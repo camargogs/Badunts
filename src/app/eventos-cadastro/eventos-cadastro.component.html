@@ -1,0 +1,45 @@
+<div class="container">
+
+  <div class="upperbar" routerLink="/eventos">
+    <p>Evento</p>
+  </div>
+
+  <Form class="form">
+    <input class="form__textInput" type="text" placeholder="Nome do evento" [(ngModel)] = "nome">
+    <input class="form__textInput" type="text" placeholder="Data"[(ngModel)] = "data">
+    <div>
+      <input class="form__textInput" type="text" placeholder="Hora de início" [(ngModel)] = "hora_ini">
+      <div></div>
+      <input class="form__textInput" type="text" placeholder="Hora de termino" [(ngModel)] = "hora_fim">
+    </div>
+  </Form>
+
+
+  <label>Equipamentos</label>
+  <div style="margin: 15px auto 37px auto;">
+    <form class ="form">
+      <input class="form__textInput" type="text" name="equipamentos" [(ngModel)] = "equipamentos">
+    </form>
+  </div>
+
+  <label>Gêneros</label>
+  <div style="margin: 15px auto 37px auto;">
+    <input class="form__textInput" type="text" name="generos" [(ngModel)] = "genero">
+  </div>
+
+  <div class="footer__btn">
+    <div class="dots">
+      <div class="dot dot--active"></div>
+      <div class="dot" (click)="eventoCad1(nome,data,hora_ini,hora_fim, equipamentos, genero)" routerLink ="/eventocad2"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <img src="../../assets/images/home-inativo.svg" alt="">
+    <img src="../../assets/images/propostas-ativo.svg" alt="">
+    <img src="../../assets/images/perfilMenu-inativo.svg" alt="">
+  </div>
+</footer>

@@ -1,0 +1,53 @@
+<div class="container">
+
+  <div class="upperbar">
+    <p>Eventos</p>
+  </div>
+
+  <ul *ngFor = " let e of eventos" class="musicos"  [routerLink]= "['eventoeve' , e.eventoId]" > 
+    <li class="musico">
+      <div>
+        <img src="{{perfil}}" class="foto">
+      </div>
+      <div class="infos">
+        <div></div>
+        <p class="nome">
+          <b>{{nome}}</b>
+        </p>
+        <p class="local">
+          {{endereco}} 
+        </p>
+      </div>
+      <div class="preco">
+        <div></div>
+        <div class="data">
+          <p> {{e.data}} </p>
+        </div>
+        <div class="hora">
+          <p>{{e.hora_ini}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+    <div  class="{{ add }}" routerLink = "/eventocad">
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+  
+
+  <div class="messege">
+    <p>Clique no + para criar um novo evento!</p>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <img src="../../assets/images/home-inativo.svg" alt="" routerLink ="{{ rota }}">
+    <img src="../../assets/images/propostas-ativo.svg" alt=""  routerLink="/eventos">
+    <img src="../../assets/images/perfilMenu-inativo.svg" alt="">
+  </div>
+</footer>

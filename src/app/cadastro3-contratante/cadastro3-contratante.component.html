@@ -1,0 +1,21 @@
+<div class="container">
+    <div>
+      <img class="logo" src="..\..\assets\images\logo.png" alt="">
+    </div>
+    <div>
+      <Form class="form">
+        <input class="form__textInput" type="text" placeholder="Nome do estabelecimento" [(ngModel)] = "estabelecimento">
+        <input class="form__textInput" type="text" placeholder="Média de público" [(ngModel)] = "publico">
+      </Form>
+    </div>
+    <div class="footer__btn">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot" routerLink="/cadastrar2"></div>
+        <div class="dot dot--active"></div>
+        <div class="dot"></div>
+      </div>
+      <button class="btn__default" (click)= "contraPart3(estabelecimento,publico)" routerLink = "/cadastrar4contra">Avançar</button>
+    </div>
+  </div>
+  

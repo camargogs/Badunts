@@ -1,0 +1,36 @@
+<div class="container">
+
+  <div class="upperbar" routerLink = "/eventoeve2">
+    <p>Musicos</p>
+  </div>
+
+  <ul class="musicos" *ngFor = " let m of musicos" [routerLink]= "['eventocontra' , m.musicoId]">
+    <li class="musico">
+      <div>
+        <img src="" class="foto" src = "{{ m.agendaId }}">
+      </div>
+      <div class="infos">
+        <div></div>
+        <p class="nome">
+          <b>{{m.nome}}</b>
+        </p>
+        <div class="local tags">
+          <div>{{m.genero}}</div>
+        </div>
+        <div class="capaPerfil__dados__endereco">{{m.endereco}}</div>
+      </div>
+      <div class="preco">
+        <div></div>
+      </div>
+    </li>
+  </ul>
+
+</div>
+
+<footer>
+  <div>
+    <img src="../../assets/images/home-inativo.svg" alt="">
+    <img src="../../assets/images/propostas-ativo.svg" alt="">
+    <img src="../../assets/images/perfilMenu-inativo.svg" alt="">
+  </div>
+</footer>

@@ -1,0 +1,23 @@
+<div class="container">
+  <div>
+    <img class="logo" src="..\..\assets\images\logo.png" alt="">
+  </div>
+  <div>
+    <Form class="form">
+      <input class="form__textInput" type="text" placeholder="Nome do titular do cartão" [(ngModel)] = "titular">
+      <input class="form__textInput" type="text" placeholder="Número" [(ngModel)] = "numero">
+      <input class="form__textInput" type="text" placeholder="Bandeira" [(ngModel)] = "bandeira">
+      <input class="form__textInput" type="text" placeholder="Código de validação" [(ngModel)] = "cod">
+      <input class="form__textInput" type="text" placeholder="Data de vencimento" [(ngModel)] = "data">
+    </Form>
+  </div>
+  <div class="footer__btn">
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot" routerLink="/cadastrar3contra"></div>
+      <div class="dot dot--active"></div>
+    </div>
+    <button class="btn__default" (click)="cadCardPart4(titular,numero,bandeira,cod,data)" routerLink = "/perfilContratante" >Avançar</button>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="container">
+
+  <div class="upperbar">
+    <p>Evento</p>
+  </div>
+
+  <div class="capaPerfil">
+
+    <div class="capaPerfil__foto">
+      <div class=btn__addTag>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="capaPerfil__dados">
+      <div class="capaPerfil__dados__nome">
+        <p>{{ nome }}</p>
+      </div>
+      <div class="capaPerfil__dados__endereco">
+        <p>{{ endereco }}</p>
+      </div>
+      <div class="capaPerfil__dados__endereco">
+        <p>{{ data }} de {{ hora_ini }} às {{ hora_fim }}</p>
+      </div>
+    </div>
+
+    <div class=btn__addTag>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <Form class="form">
+    <input class="form__textInput" type="text" placeholder="Descrição do evento" [(ngModel)] = "descricao">
+  </Form>
+  <label>informações adicionais</label>
+  <Form class="form">
+    <input class="form__textInput" type="text" placeholder="Infomação adicional" [(ngModel)] = "detalhes">
+  </Form>
+
+  <button class="btn__default" routerLink = "/eventos" (click)="eventoCad2(descricao,detalhes)">Criar Evento</button>
+
+  <div class="footer__btn">
+    <div class="dots">
+      <div class="dot" routerLink ="/eventocad"></div>
+      <div class="dot dot--active"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <img src="../../assets/images/home-inativo.svg" alt="">
+    <img src="../../assets/images/propostas-ativo.svg" alt="">
+    <img src="../../assets/images/perfilMenu-inativo.svg" alt="">
+  </div>
+</footer>
