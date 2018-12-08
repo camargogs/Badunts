@@ -25,8 +25,9 @@ export class EventosEventoComponent implements OnInit {
     this.route.params.forEach((params: Params )=>{
       let id = params['id'];
       if(id!= undefined){
+        localStorage.setItem("evento_atual", JSON.stringify(id));
         this.eventos = JSON.parse(localStorage.getItem("eventos"));
-        this.atual = JSON.parse(localStorage.getItem("atual"));
+        this.atual = JSON.parse(localStorage.getItem("atual")); 
         this.endereco = this.atual.endereco;
         console.log(this.eventos);
         for (let index = 0; index < this.eventos.length; index++) {

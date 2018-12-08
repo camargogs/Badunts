@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     var card = JSON.parse(localStorage.getItem("musicos"));
     console.log(user);
     console.log(card);
+
   }
 
   onClickMusico(){

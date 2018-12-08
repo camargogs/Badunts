@@ -9,7 +9,30 @@ export class PerfilMusicoAvaliacoesComponent implements OnInit {
 
   constructor() { }
 
+  contratantes;
+  contratos;
+  musicos;
+  atual;
+  avaliacao;
+
+  contratante;
+  nome_musi;
+  comentario;
+
+  foto:string;
   ngOnInit() {
+    this.avaliacao = JSON.parse(localStorage.getItem("avaliacao"));
+    this.contratantes = JSON.parse(localStorage.getItem("contratantes"));
+    this.musicos =  JSON.parse(localStorage.getItem("musicos"));
+    this.atual =  JSON.parse(localStorage.getItem("atual"));
+
+    
+    this.contratante =  this.contratantes[0].estabelecimento;
+    this.foto = this.contratantes[0].carteiraID;
+
+    this.nome_musi = this.atual.nome;
+    this.comentario = this.avaliacao.comentarioContratante;
   }
+
 
 }

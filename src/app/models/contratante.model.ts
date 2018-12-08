@@ -15,6 +15,11 @@ export class Contratante{
         public cep: number,
         public estabelecimento: string,
         public publico: number,
-        public cartao: number
+        public cartao: number,
+        public video: string,
+        public audio: string,
+        public descricao: string,
+        public foto: string,
+        public letras: string,
     ){}
 } 

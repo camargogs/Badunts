@@ -14,7 +14,7 @@ export class CadastroComponent implements OnInit {
   active1 = true;
   active2 = false;
   contratante: Contratante ={
-    "contratanteId":0,"nome": "", "usuario": "", "email": "", "senha": "", "avaliacao": 0, "carteiraID": "", "rg":"", "cpf": "","cidade":"","endereco":"","cep":0,"estabelecimento":"","publico":0,"cartao":0}
+    "contratanteId":0,"nome": "", "usuario": "", "email": "", "senha": "", "avaliacao": 0, "carteiraID": "", "rg":"", "cpf": "","cidade":"","endereco":"","cep":0,"estabelecimento":"","publico":0,"cartao":0,"video":"","audio":"","descricao":"","foto":"","letras":""}
   musico: Musico =  
     { "musicoId": 0, "nome": "", "usuario": "", "email": "", "senha": "", "carteiraId": "", "avaliacao": 0, "agendaId": "","rg":"", "cpf": "","cidade":"","endereco":"","cep":0,"genero":[], "tipo":"", "conta": 0,"video":"","audio":"","descricao":"","foto":"","letras":"","nome_show":"","hora_preco":0,"detalhe_show": ""};
   

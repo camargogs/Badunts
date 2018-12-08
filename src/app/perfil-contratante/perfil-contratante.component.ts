@@ -37,6 +37,14 @@ export class PerfilContratanteComponent implements OnInit {
   usuario: string;
   estabelecimento: string;
 
+  perfil: string;
+  descricao_bio: string;
+  edt_act:boolean = true;
+  spn_edt:boolean = false;
+  video_port: string;
+  audio_port:string;
+  fotos_port:string;
+
   constructor() { }
 
   ngOnInit() {
@@ -46,9 +54,75 @@ export class PerfilContratanteComponent implements OnInit {
     this.genero = user.genero;
     this.avaliacao = user.avaliacao;
     this.estabelecimento = user.estabelecimento;
+    this.perfil = user.carteiraID;
+    this.descricao_bio = user.descricao;
+    this.video_port = user.video;
+    this.audio_port = user.audio;
+    this.fotos_port = user.fotos;
     console.log(user);
   }
   
+  onPerfil(event) {
+    var user = JSON.parse(localStorage.getItem("atual"));
+    var contratantes = JSON.parse(localStorage.getItem("contratantes"));
+    var files = event.srcElement.files;
+    user.carteiraID = "../../assets/images/"+ files[0].name;
+    localStorage.setItem("atual", JSON.stringify(user));
+    for (let index = 0; index < contratantes.length; index++) {
+      if(contratantes[index].contratanteId == user.contratanteId){
+        contratantes[index] = user;
+        localStorage.setItem("contratantes", JSON.stringify(contratantes));
+      }
+    }
+    this.ngOnInit();
+  }
+  
+
+  onVideo(event) {
+    var user = JSON.parse(localStorage.getItem("atual"));
+    var contratantes = JSON.parse(localStorage.getItem("contratantes"));
+    var files = event.srcElement.files;
+    user.video = "../../assets/video/"+ files[0].name;
+    localStorage.setItem("atual", JSON.stringify(user));
+    for (let index = 0; index < contratantes.length; index++) {
+      if(contratantes[index].contratantesId == user.contratantesId){
+        contratantes[index] = user;
+        localStorage.setItem("contratantes", JSON.stringify(contratantes));
+      }
+    }
+    this.ngOnInit();
+  }
+
+  onAudio(event) {
+    var user = JSON.parse(localStorage.getItem("atual"));
+    var contratantes = JSON.parse(localStorage.getItem("contratantes"));
+    var files = event.srcElement.files;
+    user.audio = "../../assets/audios/"+ files[0].name;
+    localStorage.setItem("atual", JSON.stringify(user));
+    for (let index = 0; index < contratantes.length; index++) {
+      if(contratantes[index].contratanteId == user.contratanteId){
+        contratantes[index] = user;
+        localStorage.setItem("contratantes", JSON.stringify(contratantes));
+      }
+    }
+    this.ngOnInit();
+  }
+
+  onFoto(event) {
+    var user = JSON.parse(localStorage.getItem("atual"));
+    var contratantes = JSON.parse(localStorage.getItem("contratantes"));
+    var files = event.srcElement.files;
+    user.fotos = "../../assets/images/"+ files[0].name;
+    localStorage.setItem("atual", JSON.stringify(user));
+    for (let index = 0; index < contratantes.length; index++) {
+      if(contratantes[index].contratanteId == user.contratantes){
+        contratantes[index] = user;
+        localStorage.setItem("contratantes", JSON.stringify(contratantes));
+      }
+    }
+    this.ngOnInit();
+  }
+
   alterarTagVideo(){
     if((this.tagvideo=true)&& (this.video = 'block')){
       this.tagaudio=false;
@@ -117,9 +191,27 @@ export class PerfilContratanteComponent implements OnInit {
         this.foto = 'none';
         this.video = 'none';
         this.texto = 'none';
-  
       }
-  
+}
+
+editarBio(){
+  var user = JSON.parse(localStorage.getItem("atual"));
+  var contratantes = JSON.parse(localStorage.getItem("contratantes"));
+  user.descricao = this.descricao_bio;
+  localStorage.setItem("atual", JSON.stringify(user));
+  for (let index = 0; index < contratantes.length; index++) {
+    if(contratantes[index].musicoId == user.musicoId){
+      contratantes[index] = user;
+      localStorage.setItem("contratantes", JSON.stringify(contratantes));
+    }
+  }
+  if(this.edt_act){
+    this.edt_act = false;
+    this.spn_edt = true;
+  }else{
+    this.edt_act = true;
+    this.spn_edt = false;
+  }
 }
 }
 

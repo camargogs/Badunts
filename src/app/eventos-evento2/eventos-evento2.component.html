@@ -8,7 +8,7 @@
     <label>Músicos contratados</label>
   </div>
 
-  <ul class="musicos" *ngFor= "let m of musicos_con">
+  <ul class="musicos" *ngFor= "let m of musicos_con" routerLink = "{{ rota }}">
     <li class="musico">
       <div>
         <img src="{{ m.agendaId }}" class="foto">

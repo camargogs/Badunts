@@ -507,6 +507,11 @@
   border-radius: 50%;
   background-color: #171717;
 }
+.rating__perfilImage img{
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+}
 
 .rating__title {
   color: #373737;

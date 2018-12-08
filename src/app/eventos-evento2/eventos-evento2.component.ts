@@ -19,10 +19,14 @@ export class EventosEvento2Component implements OnInit {
   musicos_con: Musico [] = [];
   btn_add: string="btn__add";
   menssage:boolean;
+  rota;
   ngOnInit() {
     var user = JSON.parse(localStorage.getItem("atual"));
     this.contratos = JSON.parse(localStorage.getItem("contratos"));
     this.musicos = JSON.parse(localStorage.getItem("musicos"));
+    if(this.musicos==null){
+      this.musicos = [];
+    }
     if(user.musicoId){
       this.btn_add = "btn_none"
       this.menssage = true;
@@ -34,6 +38,9 @@ export class EventosEvento2Component implements OnInit {
           this.status = this.contratos[index].status;
         }
       }
+    }
+    if(this.status=="Aceito"){
+      this.rota = "/avaliar"
     }
   }
 
