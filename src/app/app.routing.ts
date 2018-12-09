@@ -1,3 +1,4 @@
+import { ListaComponent } from './lista/lista.component';
 import { PopupAvaliacaoComponent } from './popup-avaliacao/popup-avaliacao.component';
 import { BuscarMusicoComponent } from './buscar-musico/buscar-musico.component';
 import { EventosContratoComponent } from './eventos-contrato/eventos-contrato.component';
@@ -49,7 +50,8 @@ const APP_ROUTES: Routes = [
 {path:"buscamusi/eventocontra/:id", component:EventosContratoComponent},
 {path:"eventocontra", component:EventosContratoComponent},
 {path:"buscamusi",component:BuscarMusicoComponent},
-{path:"avaliar",component:PopupAvaliacaoComponent}
+{path:"avaliar",component:PopupAvaliacaoComponent},
+{path:"lista", component: ListaComponent}
 ]
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

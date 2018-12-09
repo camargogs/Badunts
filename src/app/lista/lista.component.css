@@ -7,7 +7,7 @@
 .container{
     background-color: #171717;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 63px);
 }
 
 .upperbar{
@@ -41,6 +41,10 @@
     border-bottom: 1px solid #707070;
     display: grid;
     grid-template-columns: 92px auto auto;
+}
+.musico img {
+    height: 60px;
+    overflow: hidden;
 }
 
 .foto{
@@ -104,3 +108,27 @@
     float: right;
     padding-right: 16px;
 }
+footer {
+    position: relative;
+    background-color: #171717;
+    height: 63px;
+  }
+  
+  footer>div {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 110px auto 110px;
+    width: 100vw;
+    height: 60px;
+  }
+  
+  footer>div>img {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+  }
+  footer>div>img:nth-child(2) {
+    padding: 0;
+    width: 25.5px;
+    height: 34px;
+  }

@@ -6,20 +6,20 @@
   </div>
   <ul class="musicos">
 
-    <li class="musico">
-      <img src="../../assets/images/cantora.png" class="foto">
+    <li class="musico" *ngFor="let u of user">
+      <img src="{{ fotos }}" class="foto">
       <div class="infos">
         <div></div>
           <p class="nome">
-              <b>Júlia Pacheco</b>
+              <b>{{ nome }}</b>
             </p>
             <div class="tags">
                 <div class="tag">
-                    <p>sertanejo</p>
+                    <p>{{u.genero}}</p>
                   </div>
             </div>
             <p class="local">
-              Sobral - CE
+              {{u.cidade}}
             </p>
       </div>
       <div class="preco">
@@ -31,3 +31,10 @@
 
   </ul>
 </div>
+<footer>
+    <div>
+      <img src="../../assets/images/home-inativo.svg" alt="" routerLink = "{{ rota }}">
+      <img src="../../assets//images/propostas-inativo.svg" alt="" >
+      <img src="../../assets/images/perfilMenu-ativo.svg" alt="" routerLink = "/lista">
+    </div>
+  </footer>

@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   tipo2: boolean;
 
   ngOnInit() {
-  
+    
     var user = JSON.parse(localStorage.getItem("contratantes"));
     var card = JSON.parse(localStorage.getItem("musicos"));
     var card = JSON.parse(localStorage.getItem("musicos"));
