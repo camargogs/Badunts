@@ -1,27 +1,37 @@
 <div class="container">
+  <div class="arrow__back" routerLink = "/login">
+    <img src="../../assets/images/arrow-point-to-right.svg">
+  </div>
+
   <div>
     <img class="logo" src="..\..\assets\images\logo.png" alt="">
   </div>
+  <p class="titulo__cadastro">DADOS DA CONTA</p>
   <div>
     <Form class="form">
-      <input class="form__textInput" type="text" placeholder="Nome" [(ngModel)] = "nome" required>
-      <input class="form__textInput" type="text" placeholder="E-mail" [(ngModel)] = "email" required>
-      <input class="form__textInput" type="password" placeholder="Senha" required>
-      <input class="form__textInput" type="password" placeholder="Confirmar senha" [(ngModel)] = "senha">
+      <p class="text__error" [class.visible] = "textErrorVazio">Preencha todos os campos</p>
+      <input class="form__textInput" [class.input__error] = "inputErrorNome" type="text" placeholder="Nome" [(ngModel)] = "nome" required>
+      <p class="text__error" [class.visible] = "textErrorEmail">Email inválido</p>
+      <input class="form__textInput" [class.input__error] = "inputErrorEmail" type="text" placeholder="E-mail" [(ngModel)] = "email" required>
+      <p class="text__error" [class.visible] = "textErrorSenha">Escreva a mesma senha nos dois campos</p>
+      <input class="form__textInput" [class.input__error] = "inputErrorSenha" type="password" placeholder="Senha" [(ngModel)] = "senha" required>
+      <input class="form__textInput" [class.input__error] = "inputErrorSenha" type="password" placeholder="Confirmar senha" [(ngModel)] = "confirmaSenha" required>
     </Form>
+    
     <div class="form__btn">
       <input class="btn__typeUser" [class.btn__typeUser--active] = "active1" (click) ="toggleBtn1()" type="submit" value="Músico">
       <!-- <div></div> -->
       <input class="btn__typeUser" [class.btn__typeUser--active] = "active2" (click) ="toggleBtn2()" type="submit" value="Contratante">
     </div>
   </div>
+  
   <div class="footer__btn">
     <div class="dots">
-      <div class="dot" routerLink = "/login" ></div>
       <div class="dot dot--active"></div>
       <div class="dot"></div>
       <div class="dot"></div>
+      <div class="dot"></div>
     </div>
-    <button class="btn__default"  routerLink = "/cadastrar2" (click) = "cadPart1(nome,email,senha)">Avançar</button>
+    <button (click)="cadPart1(nome,email,senha)" [routerLink] ="rota" class="btn__default">Avançar</button>
   </div>
 </div>

@@ -1,7 +1,11 @@
 <div class="container">
+  <div class="arrow__back" routerLink = "/cadastrar3musi">
+    <img src="../../assets/images/arrow-point-to-right.svg">
+  </div>
     <div>
       <img class="logo" src="..\..\assets\images\logo.png" alt="">
     </div>
+    <p class="titulo__cadastro">DADOS BANCÁRIOS</p>
     <div>
       <Form class="form">
         <input class="form__textInput" type="text" placeholder="Titular" [(ngModel)] = "titular" required>
@@ -14,10 +18,10 @@
       <div class="dots">
         <div class="dot"></div>
         <div class="dot"></div>
-        <div class="dot" routerLink="/cadastrar3musi"></div>
+        <div class="dot"></div>
         <div class="dot dot--active"></div>
       </div>
-      <button class="btn__default" routerLink ="/perfilMusico" (click) = "cardPart4(titular,bandeira,numero,agencia)">Avançar</button>
+      <button class="btn__default" routerLink ="/perfilMusico" (click) = "cardPart4(titular,bandeira,numero,agencia)">Concluir</button>
     </div>
   </div>
   
