@@ -460,8 +460,10 @@ footer>div>img:nth-child(2) {
   height: 0;
 }
 .arrow_back img{
+  position: absolute;
+  top: 15px;
   height: 15px;
-  padding: 15px;
+  left: 15px;
 }
 
 .btn_none{

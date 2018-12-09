@@ -24,7 +24,16 @@
   width: 125px;
   bottom: 6vh;
 }
-
+.arrow_back{
+  width: 30px;
+  height: 0;
+}
+.arrow_back img{
+  position: absolute;
+  top: 15px;
+  height: 15px;
+  left: 15px;
+}
 .logo {
   width: 66.77px;
   height: 87.89px;
@@ -49,6 +58,7 @@
   padding-left: 17px;
   border: 1px solid #9EC2EF;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  outline: none;
 }
 
 ::placeholder {
@@ -111,6 +121,16 @@
 }
 .btn__typeUser--active:focus{
   outline: none;
+}
+.titulo__cadastro{
+  font-size: 18pt;
+  text-align: center;
+  margin: 0 auto 27px auto;
+}
+.container>.titulo__cadastro{
+  font-size: 18pt;
+  text-align: center;
+  margin: 0 auto 27px auto;
 }
 .btn__addTag{
     position: relative;

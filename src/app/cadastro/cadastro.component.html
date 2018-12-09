@@ -1,7 +1,11 @@
 <div class="container">
+    <div class="arrow_back">
+        <img src="../../assets/images/arrow-point-to-right.svg" routerLink = "/login">
+    </div>
   <div>
     <img class="logo" src="..\..\assets\images\logo.png" alt="">
   </div>
+  <p class="titulo__cadastro">DADOS DA CONTA</p>
   <div>
     <Form class="form">
       <input class="form__textInput" type="text" placeholder="Nome" [(ngModel)] = "nome" required>
@@ -17,8 +21,8 @@
   </div>
   <div class="footer__btn">
     <div class="dots">
-      <div class="dot" routerLink = "/login" ></div>
-      <div class="dot dot--active"></div>
+      <div class="dot dot--active" routerLink = "/login" ></div>
+      <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"></div>
     </div>

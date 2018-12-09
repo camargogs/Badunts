@@ -30,6 +30,14 @@ export class PopupAvaliacaoComponent implements OnInit {
   comentarioContratante: string;
   comentarioMusico: string;
 
+  //coloração das estrelas
+  star1:string="../../assets/images/star-gray.svg";
+  star2:string="../../assets/images/star-gray.svg";
+  star3:string="../../assets/images/star-gray.svg";
+  star4:string="../../assets/images/star-gray.svg";
+  star5:string="../../assets/images/star-gray.svg";
+  
+
   // localStorage.setItem("atual", JSON.stringify(contratantes[index]));
   ngOnInit() {
     this.contratantes = JSON.parse(localStorage.getItem("contratantes"));
@@ -64,6 +72,11 @@ export class PopupAvaliacaoComponent implements OnInit {
   }
 
   notaUm(){
+    this.star1="../../assets/images/star-orange.svg";
+    this.star2="../../assets/images/star-gray.svg";
+    this.star3="../../assets/images/star-gray.svg";
+    this.star4="../../assets/images/star-gray.svg";
+    this.star5="../../assets/images/star-gray.svg";
     this.nota = 1;
     if(this.atual.publico){
     this.notaMusico = this.nota;
@@ -72,6 +85,11 @@ export class PopupAvaliacaoComponent implements OnInit {
   }
 }
   notaDois(){
+    this.star1="../../assets/images/star-orange.svg";
+    this.star2="../../assets/images/star-orange.svg";
+    this.star3="../../assets/images/star-gray.svg";
+    this.star4="../../assets/images/star-gray.svg";
+    this.star5="../../assets/images/star-gray.svg";
     this.nota = 2;
     if(this.atual.publico){
     this.notaMusico = this.nota;
@@ -81,6 +99,11 @@ export class PopupAvaliacaoComponent implements OnInit {
   }
   }
   notaTres(){
+    this.star1="../../assets/images/star-orange.svg";
+    this.star2="../../assets/images/star-orange.svg";
+    this.star3="../../assets/images/star-orange.svg";
+    this.star4="../../assets/images/star-gray.svg";
+    this.star5="../../assets/images/star-gray.svg";
     this.nota = 3;
     if(this.atual.publico){
       this.notaMusico = this.nota;
@@ -90,6 +113,11 @@ export class PopupAvaliacaoComponent implements OnInit {
     }
   }
   notaQuatro(){
+    this.star1="../../assets/images/star-orange.svg";
+    this.star2="../../assets/images/star-orange.svg";
+    this.star3="../../assets/images/star-orange.svg";
+    this.star4="../../assets/images/star-orange.svg";
+    this.star5="../../assets/images/star-gray.svg";
     this.nota = 4;
     if(this.atual.publico){
       this.notaMusico = this.nota;
@@ -99,6 +127,11 @@ export class PopupAvaliacaoComponent implements OnInit {
     }
   }
   notaCinco(){
+    this.star1="../../assets/images/star-orange.svg";
+    this.star2="../../assets/images/star-orange.svg";
+    this.star3="../../assets/images/star-orange.svg";
+    this.star4="../../assets/images/star-orange.svg";
+    this.star5="../../assets/images/star-orange.svg";
     this.nota = 5;
     if(this.atual.publico){
       this.notaMusico = this.nota;

@@ -24,6 +24,27 @@ export class Cadastro2Component implements OnInit {
       this.active1 = true;
       this.active2 = false;
     }
+    var user = JSON.parse(localStorage.getItem("musico"));
+    var con =  JSON.parse(localStorage.getItem("contratante"));  
+    if(user!=null){
+      this.rg = user.rg;
+      this.cpf = user.cpf;
+      this.cidade = user.cidade;
+      this.endereco = user.endereco;
+      if(user.cep!=0){
+       this.cep = user.cep;
+    }
+    }
+    if(con!=null){
+      this.rg = con.rg;
+      this.cpf = con.cpf;
+      this.cidade = con.cidade;
+      this.endereco = con.endereco;
+      if(con.cep!=0){
+        this.cep = con.cep;
+      }
+      
+    }
   }
 
   cardPart2(rg,cpf,cidade,endereco,cep){

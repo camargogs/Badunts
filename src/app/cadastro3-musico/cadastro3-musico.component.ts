@@ -13,11 +13,14 @@ export class Cadastro3MusicoComponent implements OnInit {
   tipo2:boolean;
   tipo3:boolean;
   
+  
 
 
 
   ngOnInit() {
-    
+    var user = JSON.parse(localStorage.getItem("musico"));
+    console.log(user);
+    this.generos = user.genero[0];   
  
   }
 

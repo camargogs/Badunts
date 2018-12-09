@@ -10,6 +10,11 @@ export class Cadastro3ContratanteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    var con =  JSON.parse(localStorage.getItem("contratante")); 
+    this.estabelecimento = con.estabelecimento;
+    if(con.publico!=0){
+      this.publico = con.publico;
+  }
   }
   estabelecimento: String;
   publico: number;

@@ -22,6 +22,18 @@ export class CadastroComponent implements OnInit {
   email: String;
   senha: String;
   ngOnInit() {
+    var user = JSON.parse(localStorage.getItem("musico"));
+    var con =  JSON.parse(localStorage.getItem("contratante"));  
+    if(user!=null){
+      this.nome = user.nome;
+      this.email = user.email;
+      this.senha = user.senha;
+    }
+    if(con!=null){
+      this.nome = con.nome;
+      this.email = con.email;
+      this.senha = con.senha;
+    }
   }
   toggleBtn1(){
     this.active1 = true;

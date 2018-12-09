@@ -18,6 +18,9 @@ export class LoginComponent implements OnInit {
   tipo1: boolean;
   tipo2: boolean;
 
+  textError:boolean = false;
+  inputError:boolean = false;
+
   ngOnInit() {
     
     var user = JSON.parse(localStorage.getItem("contratantes"));
@@ -26,6 +29,10 @@ export class LoginComponent implements OnInit {
     console.log(user);
     console.log(card);
 
+  }
+  loginError(){
+    this.textError = true;
+    this.inputError = true;
   }
 
   onClickMusico(){
@@ -42,6 +49,9 @@ export class LoginComponent implements OnInit {
     var contratantes = JSON.parse(localStorage.getItem("contratantes"));
     var musicos = JSON.parse(localStorage.getItem("musicos"));
     console.log(musicos);
+    if(email1==null||senha1==null){
+      this.loginError();
+    }
     if(musicos==null){
       musicos = []
     }
