@@ -1,13 +1,16 @@
 <div class="login">
   <img class="logo" src="../../assets/images/Group 95.png" alt="">
 
-  <input type="text"
+  <p class="text__error" [class.visible] = "textError">Email e/ou Senha incorreto(s)</p>
+
+  <input type="email"
   [(ngModel)]="email1"
-  class="input"  
+  class="input"
+  [class.input__error] = "inputError"
   placeholder="E-mail">
 
-  <input type="password" [(ngModel)]= "senha1" class="input top" placeholder="Senha" >
-  <Form class="form">
+  <input type="password" [(ngModel)]= "senha1" class="input top" [class.input__error] = "inputError" placeholder="Senha" >
+  <!-- <Form class="form">
     <div class="form__radio" [class.form__radio--checked]="tipo1" (click)= "onClickMusico()">
       <div></div><label>Musico</label>
     </div>
@@ -15,9 +18,9 @@
     <div class="form__radio"  [class.form__radio--checked]="tipo2" (click) = "onClickContratante()">
       <div></div><label>Contratante</label>
     </div>
-  </Form>
+  </Form> -->
   <div class="botoes">
-    <button (click)="onSumit(email1,senha1)" routerLink ="{{ rota }}" class="botao">Entrar</button>
     <button class="botao" routerLink = "/cadastrar">Cadastrar</button>
+    <button (click)="onSumit(email1,senha1)" routerLink ="{{ rota }}" class="botao">Entrar</button>
   </div>
 </div>
