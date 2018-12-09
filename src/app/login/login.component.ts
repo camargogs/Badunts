@@ -59,5 +59,5 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("atual", JSON.stringify(contratantes[index]));
       }
     }
-  }
+  }  
 }
