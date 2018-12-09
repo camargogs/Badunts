@@ -9,11 +9,15 @@
       </div>  
       
     <div class="stars">
-        <span class="icon-star" (click)="notaUm()"></span>
-        <span class="icon-star" (click)="notaDois()"></span>
-        <span class="icon-star" (click)="notaTres()"></span>
-        <span class="icon-star" (click)="notaQuatro()"></span>
-        <span class="icon-star" (click)="notaCinco()"></span>
+        <img class="icon-star" (click)="notaUm()" src="{{star1}}">
+        <div></div>
+        <img class="icon-star" (click)="notaDois()" src="{{star2}}">
+        <div></div>
+        <img class="icon-star" (click)="notaTres()" src="{{star3}}">
+        <div></div>
+        <img class="icon-star" (click)="notaQuatro()" src="{{star4}}">
+        <div></div>
+        <img class="icon-star" (click)="notaCinco()" src="{{star5}}">
     </div>
     <input type="text" class="input" placeholder="Adicione um comentário" [(ngModel)] = "comentarioContratante">
     <button class="btn-envi"  (click)="avaliar(comentarioContratante)"  routerLink = "/eventoeve2">Enviar</button>
