@@ -92,6 +92,10 @@ export class Cadastro4ContratanteComponent implements OnInit {
     this.cod = cod;
     this.data = data;
     var user = JSON.parse(localStorage.getItem("contratante"));
+    this.contratantes = JSON.parse(localStorage.getItem("contratantes"));
+    if(this.contratantes==null){
+      this.contratantes = [];
+    }
     user.cartao = numero;
     this.cartao.titular = titular;
     this.cartao.numero = numero;

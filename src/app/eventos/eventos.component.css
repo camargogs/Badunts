@@ -89,6 +89,7 @@
   margin: -1px 0 0 -1px;
   background-color: #377ACF;
   /* essa cor é só representativa do display da foto */
+  overflow: hidden;
 }
 
 .infos {
@@ -458,10 +459,13 @@ footer>div>img:nth-child(2) {
   width: 30px;
   height: 0;
 }
-
 .arrow_back img{
   height: 15px;
   padding: 15px;
+}
+
+.btn_none{
+  display: none;
 }
 
 

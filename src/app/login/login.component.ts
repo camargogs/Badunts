@@ -24,11 +24,12 @@ export class LoginComponent implements OnInit {
 
   
   ngOnInit() {
-    // localStorage.clear();
+
     var user = JSON.parse(localStorage.getItem("contratantes"));
     var card = JSON.parse(localStorage.getItem("musicos"));
     console.log(user);
     console.log(card);
+
   }
 
   // onClickMusico(){
@@ -50,6 +51,9 @@ export class LoginComponent implements OnInit {
     var musicos = JSON.parse(localStorage.getItem("musicos"));
     console.log(musicos);
 
+//   if(musicos==null){
+//       musicos = []
+//     }
     if(musicos != null){
       for (let index = 0; index < musicos.length; index++) {
         if(musicos[index].email==email1&&musicos[index].senha==senha1){
@@ -57,6 +61,14 @@ export class LoginComponent implements OnInit {
           localStorage.setItem("atual", JSON.stringify(musicos[index]));
           this.rota = "/perfilMusico";
         }
+
+  
+    if(contratantes==null){
+      contratantes=null;
+    }
+    for (let index = 0; index < musicos.length; index++) {
+      if(musicos[index].email==email1&&musicos[index].senha==senha1){
+        localStorage.setItem("atual", JSON.stringify(musicos[index]));
       }
     }
     if(contratantes != null){
@@ -68,7 +80,9 @@ export class LoginComponent implements OnInit {
         }
       }
     }
+
     this.loginError();
     console.log("Email ou senha está incorreto");
   }
+
 }

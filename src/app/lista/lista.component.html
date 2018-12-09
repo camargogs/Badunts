@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="upperbar">
+
+    <input type="search" class="pesquisa">
+    <img src="../../assets/images/lupa.png" class="lupa">
+  </div>
+  <ul class="musicos">
+
+    <li class="musico" *ngFor="let u of user">
+      <img src="{{ fotos }}" class="foto">
+      <div class="infos">
+        <div></div>
+          <p class="nome">
+              <b>{{ nome }}</b>
+            </p>
+            <div class="tags">
+                <div class="tag">
+                    <p>{{u.genero}}</p>
+                  </div>
+            </div>
+            <p class="local">
+              {{u.cidade}}
+            </p>
+      </div>
+      <div class="preco">
+        <div></div>
+        <div class="num"><p> 1000 </p></div>
+        <div class="numb"><p>a 1300 reais</p></div>
+      </div>
+    </li>
+
+  </ul>
+</div>
+<footer>
+    <div>
+      <img src="../../assets/images/home-inativo.svg" alt="" routerLink = "{{ rota }}">
+      <img src="../../assets//images/propostas-inativo.svg" alt="" >
+      <img src="../../assets/images/perfilMenu-ativo.svg" alt="" routerLink = "/lista">
+    </div>
+  </footer>

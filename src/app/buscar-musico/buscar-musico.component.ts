@@ -13,6 +13,9 @@ export class BuscarMusicoComponent implements OnInit {
   musicos: Musico[] =[];
   ngOnInit() {
     this.musicos = JSON.parse(localStorage.getItem("musicos"));
+    if(this.musicos==null){
+      this.musicos = [];
+    }
     for (let index = 0; index < this.musicos.length; index++) {
       this.musicos[index].musicoId = index + 1;
     }

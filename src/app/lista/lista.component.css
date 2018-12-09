@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    background-color: #171717;
+    width: 100vw;
+    height: calc(100vh - 63px);
+}
+
+.upperbar{
+    width: 100vw;
+    height: 54px;
+    background-color: #171717;
+    box-shadow: 3px 4px rgba(0,0,0,0.16);
+}
+
+.pesquisa{
+    background: linear-gradient(#9EC2EF, #377ACF);
+    opacity: 0.5;
+    width: 155px;
+    height: 25px;
+    border: none;
+    border-radius: 12px;
+    margin-left: 145px;
+    /* margin-right: 25px; */
+    margin-top: 15px;
+}
+
+.lupa{
+    position: absolute;
+    right: 25px;
+    margin-top: 14px;
+}
+
+.musico{
+    width: 100vw;
+    height: 80px;
+    border-bottom: 1px solid #707070;
+    display: grid;
+    grid-template-columns: 92px auto auto;
+}
+.musico img {
+    height: 60px;
+    overflow: hidden;
+}
+
+.foto{
+    margin-left: 16px;
+    margin-top: 14px;
+}
+
+.infos{
+    display: grid;
+    grid-template-rows: 14px auto auto auto;
+}
+
+.nome{
+    font-size: 12pt;
+    color: #EBEBEB;
+}
+
+.tags{
+    display: flex;
+}
+
+.tag{
+    border-radius: 8px;
+    background-color: #377ACF;
+    width: auto;
+    height: 14px;
+    padding: 0px 8px 0px 8px;
+    box-sizing: border-box;
+}
+
+.tag p{
+    font-size: 8pt;
+    color: #EBEBEB;
+    font-family: sans-serif;
+}
+
+.local{
+    font-size: 8pt;
+    color: #EBEBEB;
+}
+
+.preco{
+    color: #EBEBEB;
+    display: grid;
+    grid-template-rows: 14px 40px auto;
+}
+
+.num{
+    font-weight: 400;
+    font-size: 25pt;
+}
+.num p{
+    float: right;
+    padding-right: 16px;
+}
+
+.numb{
+    font-size: 8pt;
+}
+.numb p{
+    float: right;
+    padding-right: 16px;
+}
+footer {
+    position: relative;
+    background-color: #171717;
+    height: 63px;
+  }
+  
+  footer>div {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 110px auto 110px;
+    width: 100vw;
+    height: 60px;
+  }
+  
+  footer>div>img {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+  }
+  footer>div>img:nth-child(2) {
+    padding: 0;
+    width: 25.5px;
+    height: 34px;
+  }

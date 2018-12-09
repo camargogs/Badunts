@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { LoadingComponent } from './loading/loading.component';
 import { MenuComponent } from './menu/menu.component';
 import { routing } from './app.routing';
+import { ListaComponent } from './lista/lista.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { Cadastro2Component } from './cadastro2/cadastro2.component';
 import { Cadastro3ContratanteComponent } from './cadastro3-contratante/cadastro3-contratante.component';
@@ -27,13 +28,13 @@ import { PopupAvaliacaoComponent } from './popup-avaliacao/popup-avaliacao.compo
 import { PerfilContratanteComponent } from './perfil-contratante/perfil-contratante.component';
 import { BuscarMusicoComponent } from './buscar-musico/buscar-musico.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LoadingComponent,
     MenuComponent,
+    ListaComponent,
     CadastroComponent,
     Cadastro2Component,
     Cadastro3ContratanteComponent,
@@ -52,7 +53,7 @@ import { BuscarMusicoComponent } from './buscar-musico/buscar-musico.component';
     EventosContratoComponent,
     PopupAvaliacaoComponent,
     PerfilContratanteComponent,
-    BuscarMusicoComponent,
+    BuscarMusicoComponent
   ],
   imports: [
     BrowserModule,

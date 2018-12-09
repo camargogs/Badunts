@@ -26,18 +26,14 @@
   <div class="rating">
 
     <div>
-      <div class="rating__perfilImage"></div>
+      <div class="rating__perfilImage"><img src="{{ foto }}" alt=""></div>
       <div>
-        <p class="rating__title">Boteco do Sertão</p>
-        Contratou um show de voz e violão
+        <p class="rating__title">{{contratante}}</p>
+        Contratou um show de {{ nome_musi}}
       </div>
     </div>
 
-    <div class="rating__comment">Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo consequat.</div>
+    <div class="rating__comment">{{comentario}}</div>
 
     <div>
       <div class="rating__stars">

@@ -21,9 +21,14 @@
       </div>
     </div>
 </nav>
-
+<div  class="btn__add" (click)="adicionar()" >
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
 <div class="container">
-  <div class="showType">
+  <div class="showType" [class.input_editar] = "add" >
     <div>
       <div class="showType__showImage"><img src="{{ perfil }}" alt=""></div>
       <div>
@@ -40,8 +45,8 @@
     <div class="showType__description">{{descricao}}</div>
 
   </div>
- 
-  <form class="form_show" action="">
+ <div [class.input_editar] = "show">
+  <form class="form_show" action=""  >
     <label for="nome_show"></label>
     <input placeholder="Nome do show" type="text" name="nome_show" [(ngModel)] = "nome_show">
     <label for="preco_hora"></label>
@@ -50,6 +55,8 @@
     <input placeholder="Descrição do show" type="text" name="descricao" [(ngModel)] = "descricao">
     <div><button class="showType__button" (click) = "add_show(nome_show,preco,descricao)">adicionar</button></div>
   </form>
+ </div>
+  
 </div>
 
 <footer>

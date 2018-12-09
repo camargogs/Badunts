@@ -72,9 +72,16 @@
 .icon-star::before{
     padding-left: 28px; 
     font-size: 22px;
-    color: #031524!important;
 }
-
+.stars:nth-child(2)>.icon-star:hover{
+    color: rgb(248, 160, 90);
+}
+.icon-star:hover{
+    color: rgb(248, 160, 90);
+}
+.icon-star{
+    color:#3b3b3b;
+}
 .btn-envi{
     height: 30px;
     width: 100px;
@@ -83,4 +90,5 @@
     background-color: rgb(1, 127, 211);
     margin-top: 40px;
     margin-left: 90px; 
+    color: #fff;
 }

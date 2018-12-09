@@ -39,6 +39,7 @@ import { RouterLink } from '@angular/router';
     "musicoId": 0, "nome": "", "usuario": "", "email": "", "senha": "", "carteiraId": "", "avaliacao": 0, "agendaId": "", "rg":"", "cpf": "", "cidade":"", "endereco":"", "cep":0, "genero":[], "tipo":"", "conta": 0, "video":"", "audio":"", "descricao":"", "foto":"", "letras":"", "nome_show":"", "hora_preco":0, "detalhe_show": ""
   };
 
+
   nome: String;
   email: String;
   senha: String;
