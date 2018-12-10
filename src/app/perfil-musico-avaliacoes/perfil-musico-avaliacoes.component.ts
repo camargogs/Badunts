@@ -26,12 +26,16 @@ export class PerfilMusicoAvaliacoesComponent implements OnInit {
     this.musicos =  JSON.parse(localStorage.getItem("musicos"));
     this.atual =  JSON.parse(localStorage.getItem("atual"));
 
-    
-    this.contratante =  this.contratantes[0].estabelecimento;
-    this.foto = this.contratantes[0].carteiraID;
+    if(this.contratantes!=null){
+      this.contratante =  this.contratantes[0].estabelecimento;
+      this.foto = this.contratantes[0].carteiraID;
+    }
+    if(this.comentario!=null){
+      this.nome_musi = this.atual.nome;
+      this.comentario = this.avaliacao.comentarioContratante;
+    }
 
-    this.nome_musi = this.atual.nome;
-    this.comentario = this.avaliacao.comentarioContratante;
+  
   }
 
 

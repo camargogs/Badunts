@@ -1,3 +1,4 @@
+import { Contratante } from './../models/contratante.model';
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -15,16 +16,17 @@ export class LoginComponent implements OnInit {
   senha1: string
   rota: string;
   act: boolean = false;
-  tipo1: boolean;
-  tipo2: boolean;
+  // tipo1: boolean;
+  // tipo2: boolean;
 
   textError:boolean = false;
   inputError:boolean = false;
 
   ngOnInit() {
-    
+    // localStorage.clear();
+    localStorage.removeItem("contratante");
+    localStorage.removeItem("musico");
     var user = JSON.parse(localStorage.getItem("contratantes"));
-    var card = JSON.parse(localStorage.getItem("musicos"));
     var card = JSON.parse(localStorage.getItem("musicos"));
     console.log(user);
     console.log(card);
@@ -35,39 +37,50 @@ export class LoginComponent implements OnInit {
     this.inputError = true;
   }
 
-  onClickMusico(){
-    this.tipo1 = true;
-    this.tipo2 = false;
-    this.rota = "/perfilMusico";
-  }
-  onClickContratante(){
-    this.tipo1 = false;
-    this.tipo2 = true;
-    this.rota = "/perfilContratante";
-  }
+  // onClickMusico(){
+  //   this.tipo1 = true;
+  //   this.tipo2 = false;
+  //   this.rota = "/perfilMusico";
+  // }
+  // onClickContratante(){
+  //   this.tipo1 = false;
+  //   this.tipo2 = true;
+  //   this.rota = "/perfilContratante";
+  // }
   onSumit(email1,senha1){
     var contratantes = JSON.parse(localStorage.getItem("contratantes"));
     var musicos = JSON.parse(localStorage.getItem("musicos"));
     console.log(musicos);
-    if(email1==null||senha1==null){
-      this.loginError();
-    }
-    if(musicos==null){
-      musicos = []
-    }
-    if(contratantes==null){
-      contratantes=null;
-    }
-    for (let index = 0; index < musicos.length; index++) {
-      if(musicos[index].email==email1&&musicos[index].senha==senha1){
-        localStorage.setItem("atual", JSON.stringify(musicos[index]));
+    // if(email1==null||senha1==null){
+    //   this.loginError();
+    // }
+    // if(musicos==null){
+    //   musicos = []
+    // }
+    // if(contratantes==null){
+    //   contratantes=null;
+    // }
+    if(musicos != null){
+      for (let index = 0; index < musicos.length; index++) {
+        if(musicos[index].email==email1&&musicos[index].senha==senha1){
+          console.log(musicos[index]);
+          localStorage.setItem("atual", JSON.stringify(musicos[index]));
+          this.rota = "/perfilMusico";
+        }
       }
     }
-    for (let index = 0; index < contratantes.length; index++) {
-      if(contratantes[index].email==email1&&contratantes[index].senha==senha1){
-        console.log(contratantes[index]);
-        localStorage.setItem("atual", JSON.stringify(contratantes[index]));
+    
+    if(contratantes != null){
+      for (let index = 0; index < contratantes.length; index++) {
+        if(contratantes[index].email==email1&&contratantes[index].senha==senha1){
+          console.log(contratantes[index]);
+          localStorage.setItem("atual", JSON.stringify(contratantes[index]));
+          this.rota = "/perfilContratante";
+        }
       }
     }
+    this.loginError();
+    console.log("Email ou senha está incorreto");
   }
+
 }

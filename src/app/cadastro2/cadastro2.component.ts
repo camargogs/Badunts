@@ -15,6 +15,17 @@ export class Cadastro2Component implements OnInit {
   cep: number;
   active1:boolean;
   active2:boolean;
+  rota1:string;
+  rota2:string;
+
+  //para validar o formulário
+  textError:boolean=false;
+  inputErrorRG:boolean=false;
+  inputErrorCPF:boolean=false;
+  inputErrorCidade:boolean=false;
+  inputErrorEnd:boolean=false;
+  inputErrorCEP:boolean=false;
+
   ngOnInit() {
     if(localStorage.getItem("musico")){
       this.active1 = false;
@@ -47,7 +58,61 @@ export class Cadastro2Component implements OnInit {
     }
   }
 
+  validacaoFormulario() {
+    console.log(this.rg+"RG");
+    //RG
+    if(this.rg == "" || this.rg == null){
+      this.inputErrorRG=true;
+    }else{
+      this.inputErrorRG=false;
+    }
+    //CPF
+    if(this.cpf == "" || this.cpf == null){
+      this.inputErrorCPF=true;
+    }else {
+      this.inputErrorCPF=false;
+    }
+    //Cidade
+    if(this.cidade == "" || this.cidade == null){
+      this.inputErrorCidade=true;
+    }else {
+      this.inputErrorCidade=false;
+    }
+    //Endereço
+    if(this.endereco == "" || this.endereco == null){
+      this.inputErrorEnd=true;
+    }else {
+      this.inputErrorEnd=false;
+    }
+    //CEP
+    if(this.cep == undefined){
+      this.inputErrorCEP=true;
+    }else {
+      this.inputErrorCEP=false;
+    }
+    //campos vazios
+    if(this.rg==""|| this.rg == null || this.cpf==""|| this.cpf == null || this.cidade==""|| this.cidade == null || this.endereco=="" || this.endereco == null || this.cep==undefined){
+      this.textError=true;
+    }else{
+      this.textError=false;
+    }
+    if(this.inputErrorRG || this.inputErrorCPF || this.inputErrorCidade || this.inputErrorEnd || this.inputErrorCEP){
+      return false;
+    }else{
+      return true;
+    }
+  }
+
   cardPart2(rg,cpf,cidade,endereco,cep){
+
+    if(this.validacaoFormulario()){
+      console.log(this.rota1);
+      console.log(this.rota2);
+      this.rota1="/cadastrar3musi";
+      this.rota2="/cadastrar3contra";
+      console.log(this.rota1);
+      console.log(this.rota2);
+    }
 
     if(localStorage.getItem("musico")){
       var user = JSON.parse(localStorage.getItem("musico"));

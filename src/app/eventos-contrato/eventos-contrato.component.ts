@@ -102,10 +102,13 @@ export class EventosContratoComponent implements OnInit {
       }
        
     }
-    this.nome_eve = this.evento.nome;
-    this.data_eve = this.evento.data;
-    this.hora_fim = this.evento.hora_fim;
-    this.hora_ini = this.evento.hora_ini;
+    if(this.evento!=undefined){
+      this.nome_eve = this.evento.nome;
+      this.data_eve = this.evento.data;
+      this.hora_fim = this.evento.hora_fim;
+      this.hora_ini = this.evento.hora_ini;
+    }
+    
   
 }
 

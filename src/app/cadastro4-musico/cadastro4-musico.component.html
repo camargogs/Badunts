@@ -2,27 +2,28 @@
     <div class="arrow_back">
         <img src="../../assets/images/arrow-point-to-right.svg" routerLink = "/cadastrar3musi">
     </div>
-  <div>
     <div>
       <img class="logo" src="..\..\assets\images\logo.png" alt="">
     </div>
     <p class="titulo__cadastro">DADOS BANCÁRIOS</p>
     <div>
       <Form class="form">
-        <input class="form__textInput" type="text" placeholder="Titular" [(ngModel)] = "titular" required>
-        <input class="form__textInput" type="text" placeholder="Bandeira" [(ngModel)] = "bandeira" required>
-        <input class="form__textInput" type="text" placeholder="Número da conta" [(ngModel)] = "numero" required>
-        <input class="form__textInput" type="text" placeholder="Agência" [(ngModel)] = "agencia" required>
+        <p class="text__error" [class.visible] = "textError">Preencha todos os campos</p>
+  
+        <input class="form__textInput" [class.input__error] = "inputErrorTitular" type="text" #input (input)="input.value=$event.target.value.toUpperCase()" placeholder="Titular" [(ngModel)] = "titular" required>
+        <input class="form__textInput" [class.input__error] = "inputErrorBandeira" type="text" placeholder="Banco" [(ngModel)] = "bandeira" required>
+        <input class="form__textInput" [class.input__error] = "inputErrorNumero" type="number" placeholder="Número da conta" [(ngModel)] = "numero" required>
+        <input class="form__textInput" [class.input__error] = "inputErrorAgencia" type="number" placeholder="Agência" [(ngModel)] = "agencia" required>
       </Form>
     </div>
     <div class="footer__btn">
       <div class="dots">
         <div class="dot"></div>
         <div class="dot"></div>
-        <div class="dot" routerLink="/cadastrar3musi"></div>
+        <div class="dot"></div>
         <div class="dot dot--active"></div>
       </div>
-      <button class="btn__default" routerLink ="/perfilMusico" (click) = "cardPart4(titular,bandeira,numero,agencia)">Avançar</button>
+      <button class="btn__default" [routerLink] ="rota" (click) = "cardPart4(titular,bandeira,numero,agencia)">Concluir</button>
     </div>
-  </div>
+</div>
   

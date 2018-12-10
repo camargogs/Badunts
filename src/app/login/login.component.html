@@ -10,7 +10,7 @@
   placeholder="E-mail">
 
   <input type="password" [(ngModel)]= "senha1" class="input top" [class.input__error] = "inputError" placeholder="Senha" >
-  <Form class="form">
+  <!-- <Form class="form">
     <div class="form__radio" [class.form__radio--checked]="tipo1" (click)= "onClickMusico()">
       <div></div><label>Musico</label>
     </div>
@@ -18,9 +18,9 @@
     <div class="form__radio"  [class.form__radio--checked]="tipo2" (click) = "onClickContratante()">
       <div></div><label>Contratante</label>
     </div>
-  </Form>
+  </Form> -->
   <div class="botoes">
-    <button (click)="onSumit(email1,senha1)" routerLink ="{{ rota }}" class="botao">Entrar</button>
     <button class="botao" routerLink = "/cadastrar">Cadastrar</button>
+    <button (click)="onSumit(email1,senha1)" routerLink ="{{ rota }}" class="botao">Entrar</button>
   </div>
 </div>

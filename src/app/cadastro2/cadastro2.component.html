@@ -8,21 +8,32 @@
   <p class="titulo__cadastro">DADOS PESSOAIS</p>
   <div>
     <Form class="form">
-      <input class="form__textInput" type="text" placeholder="RG" [(ngModel)] = "rg" required>
-      <input class="form__textInput" type="text" placeholder="CPF" [(ngModel)] = "cpf" required>
-      <input class="form__textInput" type="text" placeholder="Cidade" [(ngModel)] = "cidade" required>
-      <input class="form__textInput" type="text" placeholder="Endereço" [(ngModel)] = "endereco" required>
-      <input class="form__textInput" type="text" placeholder="CEP" [(ngModel)] = "cep">
+      <p class="text__error" [class.visible] = "textError">Preencha todos os campos corretamente</p>
+      
+      <input class="form__textInput" [class.input__error] = "inputErrorRG" 
+      type="number" placeholder="RG" [(ngModel)] = "rg" required>
+
+      <input class="form__textInput" [class.input__error] = "inputErrorCPF" 
+      type="number" placeholder="CPF" [(ngModel)] = "cpf" required>
+
+      <input class="form__textInput" [class.input__error] = "inputErrorCidade" 
+      type="text" placeholder="Cidade" [(ngModel)] = "cidade" required>
+
+      <input class="form__textInput" [class.input__error] = "inputErrorEnd" 
+      type="text" placeholder="Endereço" [(ngModel)] = "endereco" required>
+
+      <input class="form__textInput" [class.input__error] = "inputErrorCEP" 
+      type="number" placeholder="CEP" [(ngModel)] = "cep" required>
     </Form>
   </div>
   <div class="footer__btn">
     <div class="dots">
-      <div class="dot" routerLink="/cadastrar"></div>
+      <div class="dot"></div>
       <div class="dot dot--active"></div>
       <div class="dot"></div>
       <div class="dot"></div>
     </div>
-    <button class="btn__default" [class.btn_none] ="active1" routerLink = "/cadastrar3musi" (click)="cardPart2(rg,cpf,cidade,endereco,cep)">Avançar</button>
-    <button class="btn__default" [class.btn_none] ="active2" routerLink = "/cadastrar3contra" (click)="cardPart2(rg,cpf,cidade,endereco,cep)">Avançar</button>
+    <button class="btn__default" [class.btn_none] ="active1" [routerLink] = "rota1" (click)="cardPart2(rg,cpf,cidade,endereco,cep)">Avançar</button>
+    <button class="btn__default" [class.btn_none] ="active2" [routerLink] = "rota2" (click)="cardPart2(rg,cpf,cidade,endereco,cep)">Avançar</button>
   </div>
 </div>

@@ -18,7 +18,7 @@ export class PerfilMusicoComponent implements OnInit {
   todo:string;
 
   agendaId: string;
-  avaliacao: number;
+  avaliacao: 0;
   carteiraId: string;
   cep: number;
   cidade: string;
@@ -27,7 +27,7 @@ export class PerfilMusicoComponent implements OnInit {
   email: string;
   endereco: string;
   genero: string;
-  musicoId: string;
+  musicoId: 0;
   nome: string;
   rg: string;
   senha: string;
@@ -60,6 +60,7 @@ export class PerfilMusicoComponent implements OnInit {
     this.rota = "/eventos"
     this.rota_img = "../../assets/images/propostas-inativo.svg"
     var user = JSON.parse(localStorage.getItem("atual"));
+    console.log(user);
     this.descricao_bio = user.descricao;
     
     console.log(user);
@@ -73,6 +74,9 @@ export class PerfilMusicoComponent implements OnInit {
     this.audio_port = user.audio;
     this.fotos_port = user.fotos; 
     console.log(this.contratos);
+    if(this.contratos==null){
+      this.contratos=[];
+    }
     for (let index = 0; index < this.contratos.length; index++) {
       if(this.contratos[index].musicoId== user.musicoId){
         if(this.contratos[index].status =="Pendente"){
