@@ -28,8 +28,7 @@ export class LoginComponent implements OnInit {
     localStorage.removeItem("musico");
     var user = JSON.parse(localStorage.getItem("contratantes"));
     var card = JSON.parse(localStorage.getItem("musicos"));
-    console.log(user);
-    console.log(card);
+
 
   }
   loginError(){

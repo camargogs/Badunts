@@ -62,7 +62,7 @@
     overflow: hidden;
     background-color: #F6F6F6;
   }
-  
+
   /* Perfil */
   
   .capaPerfil {
@@ -70,7 +70,7 @@
     grid-template-columns: auto auto auto;
     width: 340px;
     height: 116px;
-    background-color: black;
+    background-color: #171717;
     margin: auto;
     margin-top: 10px;
   }
@@ -107,7 +107,7 @@
     height: 14px;
     background-color: #377ACF;
     margin-top: 7px;
-    border-radius: 8px;
+    border-radius: 9px;
     text-align: center;
     font-size: 8px;
     color: #FFFFFF;
@@ -115,7 +115,7 @@
   
   .capaPerfil__dados__endereco {
     margin-top: 5px;
-    font-size: 9px;
+    font-size: 12px;
     color: #FFFFFF;
   }
   
@@ -129,6 +129,7 @@
   }
   .capaPerfil__linha__avaliacaoContratente img{
     margin-left: 5px;
+    width: 10px;
   }
   
   
@@ -138,7 +139,7 @@
     height: 70px;
     margin: auto;
     margin-top: 10px;
-    font-size: 9px;
+    font-size: 14px;
   }
   
   
@@ -545,14 +546,16 @@
     height: 70px;
     width: 70px;
   }
+  .custom-avatar>img{
+    border-radius: 50%;
+    height: 79px;
+    width: 79px;
+  }
   .btn_bio{
-    border: none;
-    background-color: #377ACF;
-    height: 15px;
-    width: 60px;
-    color: #efefefb3;
-    font-size:12px; 
-    border-radius: 25px;
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    top: 238px;
   }
 
   .input_editar{

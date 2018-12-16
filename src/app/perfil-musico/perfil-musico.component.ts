@@ -63,6 +63,8 @@ export class PerfilMusicoComponent implements OnInit {
     console.log(user);
     this.descricao_bio = user.descricao;
     
+    this.alterarTagTodo();
+
     console.log(user);
     this.nome = user.nome;
     this.cidade = user.cidade;

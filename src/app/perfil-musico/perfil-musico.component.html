@@ -4,7 +4,7 @@
       <div></div> <img src="../../assets/images/arrow-point-to-right.svg">
     </div>
     <div class="nav__tabs__musico--active" routerLink ="/perfilMusico">
-      <div></div> <img src="../../assets/images/propostas-ativo.svg">
+      <div></div> <img src="../../assets/images/perfil-ativo.svg">
       <p>Perfil</p>
     </div>
     <div routerLink ="/shows">
@@ -51,10 +51,10 @@
     </div>
 
   </div>
-
+  <img class= "btn_bio" (click)= "editarBio()" src="../../assets/images/pen.svg">
+      
   <div class="biosPerfil">
     <span [class.span_editar] = "spn_edt" >{{ descricao_bio }}</span>
-    <button class= "btn_bio" (click)= "editarBio()">Editar</button>
     <input placeholder="Digite a descrição" type="text" id="input_editar" [class.input_editar] = "edt_act" [(ngModel)] = "descricao_bio"> 
   </div>
 
@@ -77,6 +77,23 @@
 
 
   <div class="posts">
+
+    <div [style.display] = "todo" (click) = alterarTagTodo() class="post video">
+        <video width="410" height="200" controls>
+            <source src="{{ video_port }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <audio controls>
+              <source src="" type="audio/ogg">
+              <source src="{{ audio_port }}" type="audio/mp3">
+            Your browser does not support the audio element.
+            </audio>
+            <div class="post__arquivoAnexado">
+                <img src="{{ fotos_port }}" alt="">
+              </div>
+    </div>
+
+
     <!-- post video -->
     <div [style.display] = "video" (click) = alterarTagVideo() class="post video">
      

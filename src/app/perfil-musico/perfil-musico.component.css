@@ -119,13 +119,13 @@
   margin-top: 7px;
   border-radius: 8px;
   text-align: center;
-  font-size: 8px;
+  font-size: 9px;
   color: #FFFFFF;
 }
 
 .capaPerfil__dados__endereco {
   margin-top: 5px;
-  font-size: 9px;
+  font-size: 12px;
   color: #FFFFFF;
 }
 
@@ -148,7 +148,7 @@
   height: 70px;
   margin: auto;
   margin-top: 10px;
-  font-size: 9px;
+  font-size: 14px;
 }
 
 
@@ -239,12 +239,12 @@
 }
 
 .post__conteudoAnexado__titulo {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .post__conteudoAnexado__conteudo {
   margin-top: 5px;
-  font-size: 9px;
+  font-size: 12px;
 }
 
  /* tag post video */
@@ -564,10 +564,13 @@ input[type='file'] {
   text-align: center;
   display: inline-block;
   cursor: pointer;
- 
   height: 70px;
   width: 70px;
- 
+}
+.custom-avatar>img{
+  border-radius: 50%;
+  height: 79px;
+  width: 79px;
 }
 .custom-video , .custom-audio, .custom-foto{
   text-align: center;
@@ -588,13 +591,10 @@ input[type='file'] {
   padding-right: 80px;
 }
 .btn_bio{
-  border: none;
-  background-color: #377ACF;
-  height: 15px;
-  width: 60px;
-  color: #efefefb3;
-  font-size:12px; 
-  border-radius: 25px;
+  width: 20px;
+  position: absolute;
+  right: 20px;
+  top: 238px;
 }
 .span_editar{
   display: none;
@@ -658,4 +658,15 @@ input[type='file'] {
   left: 10px;
   width: 5px;
   height: 25px;
+}
+
+.stars{
+  display: grid;
+  grid-template-columns: 22px auto 22px auto 22px auto 22px auto 22px;
+  margin: 40px auto 0 auto;
+  width: 198px;
+}
+
+.icon-star{
+  width: 22px;
 }

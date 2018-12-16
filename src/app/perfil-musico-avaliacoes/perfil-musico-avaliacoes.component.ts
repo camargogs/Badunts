@@ -20,7 +20,17 @@ export class PerfilMusicoAvaliacoesComponent implements OnInit {
   comentario;
 
   foto:string;
+  star1: string;
+  star2: string;
+  star3: string;
+  star4: string;
+  star5: string;
+  nota: number;
+  notaMusico;
+  notaContratante;
+
   ngOnInit() {
+    
     this.avaliacao = JSON.parse(localStorage.getItem("avaliacao"));
     this.contratantes = JSON.parse(localStorage.getItem("contratantes"));
     this.musicos =  JSON.parse(localStorage.getItem("musicos"));
@@ -34,9 +44,44 @@ export class PerfilMusicoAvaliacoesComponent implements OnInit {
       this.nome_musi = this.atual.nome;
       this.comentario = this.avaliacao.comentarioContratante;
     }
-
-  
+ 
+    if(this.atual!=null){
+      this.nota = this.atual.avaliacao;
+    }
+    if(this.nota == 1){
+      this.star1="../../assets/images/star-orange.svg";
+      this.star2="../../assets/images/star-gray.svg";
+      this.star3="../../assets/images/star-gray.svg";
+      this.star4="../../assets/images/star-gray.svg";
+      this.star5="../../assets/images/star-gray.svg";
+    }
+    if(this.nota==2){
+      this.star1="../../assets/images/star-orange.svg";
+      this.star2="../../assets/images/star-orange.svg";
+      this.star3="../../assets/images/star-gray.svg";
+      this.star4="../../assets/images/star-gray.svg";
+      this.star5="../../assets/images/star-gray.svg";
+    }
+    if(this.nota==3){
+      this.star1="../../assets/images/star-orange.svg";
+      this.star2="../../assets/images/star-orange.svg";
+      this.star3="../../assets/images/star-orange.svg";
+      this.star4="../../assets/images/star-gray.svg";
+      this.star5="../../assets/images/star-gray.svg";
+    }
+    if(this.nota==4){
+      this.star1="../../assets/images/star-orange.svg";
+      this.star2="../../assets/images/star-orange.svg";
+      this.star3="../../assets/images/star-orange.svg";
+      this.star4="../../assets/images/star-orange.svg";
+      this.star5="../../assets/images/star-gray.svg";
+    }
+    if(this.nota==5){
+      this.star1="../../assets/images/star-orange.svg";
+      this.star2="../../assets/images/star-orange.svg";
+      this.star3="../../assets/images/star-orange.svg";
+      this.star4="../../assets/images/star-orange.svg";
+      this.star5="../../assets/images/star-orange.svg";
+    }
   }
-
-
 }

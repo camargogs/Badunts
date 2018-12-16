@@ -36,9 +36,17 @@
     <div class="rating__comment">{{comentario}}</div>
 
     <div>
-      <div class="rating__stars">
-        <img src="../../assets/images/stars.png">
-      </div>
+        <div class="stars">
+            <img class="icon-star" (click)="notaUm()" src="{{star1}}">
+            <div></div>
+            <img class="icon-star" (click)="notaDois()" src="{{star2}}">
+            <div></div>
+            <img class="icon-star" (click)="notaTres()" src="{{star3}}">
+            <div></div>
+            <img class="icon-star" (click)="notaQuatro()" src="{{star4}}">
+            <div></div>
+            <img class="icon-star" (click)="notaCinco()" src="{{star5}}">
+        </div>
     </div>
   </div>
 

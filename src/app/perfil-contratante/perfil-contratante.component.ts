@@ -60,6 +60,7 @@ export class PerfilContratanteComponent implements OnInit {
     this.audio_port = user.audio;
     this.fotos_port = user.fotos;
     console.log(user);
+    this.alterarTagTodo();
   }
   
   onPerfil(event) {
